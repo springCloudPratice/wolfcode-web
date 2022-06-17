@@ -1,0 +1,305 @@
+html, body {
+    height: 100%;
+}
+.horizontal-type .layui-layout-admin .layui-header {
+    top: 56px;
+}
+.horizontal-type .layadmin-pagetabs, .horizontal-type .layui-layout-admin .layui-body, .horizontal-type .layui-layout-admin .layui-footer, .horizontal-type .layui-layout-admin .layui-layout-left {
+    left: 0px;
+}
+.horizontal-type .layadmin-header-index {
+    top: 86px;
+}
+.horizontal-type .layui-layout-admin .layui-body {
+    top: 116px;
+}
+.horizontal-type .layui-layout-admin .layui-header .layui-layout-common .layui-nav-item.layadmin-flexible {
+    display: none;
+}
+.horizontal-menu {
+    position: relative;
+    height: 56px;
+    z-index: 1500;
+    border-bottom: none;
+    background-color: #20222A;
+}
+.sys-title {
+    float: left;
+    display: inline-block;
+    width: 200px;
+    height: 100%;
+    text-align: center;
+    line-height: 56px;
+    font-size: 18px;
+    color: #fff;
+}
+
+.sys-menu {
+    margin-left: 210px;
+    margin-right: 75px;
+    height: 100%;
+}
+
+.sys-menu ul {
+    height: 100%;
+    font-size: 0px;
+    text-align: right;
+}
+
+.sys-menu ul li {
+    position: relative;
+    display: inline-block;
+    height: 56px;
+    line-height: 56px;
+    width: 168px;
+    text-align: center;
+    cursor: pointer;
+    transform: skewX(-15deg);
+    -moz-transform: skewX(-15deg);
+    -webkit-transform: skewX(-15deg);
+    -ms-transform: skewX(-15deg);
+}
+
+.sys-menu ul li:hover {
+    background-color: #447ED9;
+}
+
+.sys-menu ul li:hover::before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    display: inline-block;
+    width: 52px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.sys-menu ul li.layui-this {
+    background-color: #447ED9;
+}
+
+.sys-menu ul li.layui-this::before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    display: inline-block;
+    width: 52px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.sys-menu ul li::after {
+    content: '';
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    display: inline-block;
+    width: 2px;
+    height: 15px;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.sys-menu ul li:last-child::after {
+    display: none;
+}
+
+.sys-menu ul li .title {
+    display: inline-block;
+    margin-right: 6px;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.9);
+    transform: skewX(15deg);
+    -moz-transform: skewX(15deg);
+    -webkit-transform: skewX(15deg);
+    -ms-transform: skewX(15deg);
+}
+
+.sys-menu ul li .subtitle {
+    display: inline-block;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.7);
+    transform: skewX(15deg);
+    -moz-transform: skewX(15deg);
+    -webkit-transform: skewX(15deg);
+    -ms-transform: skewX(15deg);
+}
+
+.sys-menu ul li .division-line {
+    display: inline-block;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.15);
+}
+.sys-menu ul li>a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 2000;
+    color: transparent;
+    background-color: rgba(0, 0, 0, 0);
+}
+.sys-menu ul li .second-menu {
+    display: none;
+    position: absolute;
+    top: 56px;
+    right: -10px;
+    width: 196px;
+    padding: 0 12px;
+    transform: skewX(15deg);
+    -moz-transform: skewX(15deg);
+    -webkit-transform: skewX(15deg);
+    -ms-transform: skewX(15deg);
+    background-color: #20222A;
+    border-radius: 0px 0px 8px 8px;
+}
+.sys-menu .second-menu>dd {
+    text-align: left;
+    line-height: normal;
+}
+.sys-menu .second-menu>dd a {
+    display: inline-block;
+    text-align: left;
+    width: 100%;
+    padding: 14px 9px;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #fff !important;
+}
+.sys-menu .second-menu>dd:hover {
+    background-color: #447ED9;
+}
+.sys-menu .second-menu>dd.layui-this {
+    background-color: #447ED9;
+}
+.more-menu {
+    position: absolute;
+    top: 50%;
+    right: 25px;
+    height: 100%;
+    line-height: 56px;
+    transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    cursor: pointer;
+}
+.more-menu i {
+    font-size: 30px;
+    color: #fff;
+}
+.more-menu:hover>i {
+    background-color: #447ED9;
+}
+.more-menu .menu-list {
+    display: none;
+    position: absolute;
+    top: 55px;
+    right: -22px;
+    width: 196px;
+    padding: 0 12px;
+    overflow-y: auto;
+    background-color: #20222A;
+    border-radius: 0px 0px 8px 8px;
+}
+.more-menu .menu-list .first-menu {
+    position: relative;
+}
+.more-menu .menu-list .first-menu.layui-this .menu-title {
+    background-color: #447ED9;
+}
+.more-menu .menu-list .first-menu>a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 2000;
+    color: transparent;
+}
+.more-menu .menu-title {
+    position: relative;
+    line-height: normal;
+    padding: 14px 9px;
+}
+.more-menu .first-menu:hover .menu-title {
+    background-color: #447ED9;
+}
+.more-menu .first-menu .title {
+    display: inline-block;
+    margin-right: 6px;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.more-menu .first-menu .subtitle {
+    display: inline-block;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.7);
+}
+.more-menu .second-menu {
+    display: none;
+    padding: 0 12px;
+}
+.more-menu .second-menu>dd {
+    text-align: left;
+    line-height: normal;
+}
+.more-menu .second-menu>dd a {
+    display: inline-block;
+    text-align: left;
+    width: 100%;
+    padding: 14px 9px;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #fff !important;
+}
+.more-menu .second-menu>dd:hover {
+    background-color: #447ED9;
+}
+.more-menu .second-menu>dd.layui-this {
+    background-color: #447ED9;
+}
+.more-menu .menu-title .nav-more-close {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid dashed dashed;
+    border-color: #fff transparent transparent;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all .2s;
+    -webkit-transition: all .2s;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    margin-top: -3px;
+    border-width: 6px;
+    border-top-color: rgba(255,255,255,1);
+}
+.more-menu .menu-list .nav-more-open {
+    margin-top: -9px;
+    border-style: dashed dashed solid;
+    border-color: transparent transparent #fff;
+}
+/*.ict-logout .logout-icon {*/
+/*    display: inline-block;*/
+/*    width: 20px;*/
+/*    height: 20px;*/
+/*    background: url("./res/logout-icon.png") no-repeat center;*/
+/*    background-size: 100% 100%;*/
+/*}*/

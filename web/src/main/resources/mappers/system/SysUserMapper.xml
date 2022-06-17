@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.wolfcode.web.modules.sys.mapper.SysUserMapper">
+
+    <resultMap id="queryUserInfoMap" type="cn.wolfcode.web.modules.sys.entity.SysUser">
+        <id property="userId" column="USER_ID"/>
+        <result property="username" column="USERNAME"/>
+        <result property="nickName" column="NICK_NAME"/>
+        <result property="phone" column="PHONE"/>
+        <result property="email" column="EMAIL"/>
+        <association property="sysDept" javaType="cn.wolfcode.web.modules.sys.entity.SysDept">
+            <result property="deptName" column="DEPT_NAME"/>
+            <result property="deptPath" column="DEPT_PATH"/>
+            <result property="deptId" column="DEPT_ID"/>
+            <result property="parentDeptId" column="PARENT_DEPT_ID"/>
+        </association>
+        <collection property="roleInfoList" ofType="cn.wolfcode.web.modules.sys.entity.SysRoleInfo">
+            <id property="roleId" column="ROLE_ID"/>
+            <id property="roleName" column="ROLE_NAME"/>
+        </collection>
+    </resultMap>
+
+    <select id="queryUserInfo" resultMap="queryUserInfoMap">
+        SELECT u.USER_ID,
+               u.USERNAME,
+               u.NICK_NAME,
+               u.PHONE,
+               u.EMAIL,
+               d.DEPT_ID,
+               d.PARENT_DEPT_ID,
+               d.DEPT_NAME,
+               d.DEPT_PATH,
+               r.ROLE_ID,
+               r.ROLE_NAME
+        FROM SYS_USER_INFO u
+                 LEFT JOIN SYS_DEPT_INFO d ON u.DEPT_ID = d.DEPT_ID
+                 LEFT JOIN SYS_USER_ROLE ur ON ur.USER_ID = u.USER_ID
+                 LEFT JOIN SYS_ROLE_INFO r ON ur.ROLE_ID = r.ROLE_ID
+        WHERE u.USER_ID = #{userId}
+    </select>
+</mapper>

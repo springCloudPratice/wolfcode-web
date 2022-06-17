@@ -1,0 +1,21 @@
+datasource:
+  mysql:
+    validation-query: select 1
+    driver: com.mysql.jdbc.Driver
+    database: nojoke
+    ip: localhost
+    port: 3306
+    username: root
+    password: 12345678
+    #8.0配置  serverTimezone=PRC
+    #5.7配置  serverTimezone=GMT%2B8
+    #5.7配置  serverTimezone=UTC  早8小时
+    url: jdbc:mysql://${datasource.mysql.ip}:${datasource.mysql.port}/${datasource.mysql.database}?useSSL=false&serverTimezone=GMT%2B8&characterEncoding=utf8
+  redis:
+    database: 0
+    ip: localhost
+    port: 6379
+    password:
+  druid:
+    login-username: admin
+    login-password: 123456

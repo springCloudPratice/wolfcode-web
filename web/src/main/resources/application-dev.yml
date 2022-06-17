@@ -1,0 +1,18 @@
+datasource:
+  mysql:
+    validation-query: select 1
+    driver: com.mysql.cj.jdbc.Driver
+    database: web-test
+    ip: localhost
+    port: 3306
+    username: root
+    password: motodroid4
+    url: jdbc:mysql://${datasource.mysql.ip}:${datasource.mysql.port}/${datasource.mysql.database}?useSSL=false&serverTimezone=UTC&characterEncoding=utf8
+  redis:
+    database: 0
+    ip: 49.235.85.30
+    port: 6379
+    password: motodroid4
+  druid:
+    login-username: admin
+    login-password: 123456

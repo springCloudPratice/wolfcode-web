@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <packaging>pom</packaging>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.2.5.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+    <groupId>com.nebula</groupId>
+    <artifactId>parent</artifactId>
+    <version>2.0-SNAPSHOT</version>
+    <name>parent</name>
+    <description>ahsj</description>
+
+    <properties>
+        <mybatis-plus-generator>3.3.1</mybatis-plus-generator>
+        <link-ahsj.version>2.1.5-SNAPSHOT</link-ahsj.version>
+        <thumbnailator.version>0.4.8</thumbnailator.version>
+        <druid.version>1.1.21</druid.version>
+        <java.version>1.8</java.version>
+        <mysql.version>8.0.18</mysql.version>
+        <hutool-all.version>5.3.2</hutool-all.version>
+        <guava.version>27.1-jre</guava.version>
+        <mybatis-plus.version>3.3.1</mybatis-plus.version>
+        <jquery.version>3.3.1-2</jquery.version>
+        <easypoi.version>4.0.0</easypoi.version>
+        <webjars-locator.version>0.36</webjars-locator.version>
+        <commons-compress.version>1.18</commons-compress.version>
+        <bcprov-jdk16.version>1.46</bcprov-jdk16.version>
+        <kaptcha.version>0.0.9</kaptcha.version>
+        <velocity.version>1.7</velocity.version>
+        <jasypt.version>3.0.2</jasypt.version>
+        <ojdbc8.version>19.3.0.0</ojdbc8.version>
+        <orai18n.version>12.1.0.2.0</orai18n.version>
+    </properties>
+
+    <modules>
+        <module>web</module>
+    </modules>
+    <dependencies>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.7.0</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
