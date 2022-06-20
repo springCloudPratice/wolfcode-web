@@ -125,8 +125,8 @@ spring:
     cache-names: ${spring.application.name}
 logging:
   level:
-    com:
-      nebula: debug
+    cn:
+      wolfcode: debug
     org:
       springframework: info
     root: info
@@ -144,7 +144,7 @@ server:
 mybatis-plus:
   mapper-locations: classpath*:mappers/**/*.xml
   #实体扫描，多个package用逗号或者分号分隔
-  typeAliasesPackage: com.nebula.*.modules.*.entity
+  typeAliasesPackage: cn.wolfcode.*.modules.*.entity
   global-config:
     # 数据库相关配置
     db-config:

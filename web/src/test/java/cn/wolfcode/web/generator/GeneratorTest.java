@@ -33,16 +33,16 @@ public class GeneratorTest {
         GeneratorUtils.generator(
                 "web",
                 "cn.wolfcode.web.modules",
-                "appdemo",
+                "custinfo",
                 DbType.MYSQL,
                 "D:\\myProjectOnIdeaOrOthers\\wolfPjOutput",
                 // 页面上的父上下文
                 // 自己的上下文
                 "1111",
-                "App演示菜单",
+                "企业客户管理",
                 null,
-                "app",
-                "appdemo",
+                "cust",
+                "custinfo",
                 "姚鸿伟",
                 "127.0.0.1",
                 "3306",
@@ -50,7 +50,7 @@ public class GeneratorTest {
                 "root",
                 "motodroid4",
                 new String[]{"bmd_", "mp_", "SYS_"},
-                new String[]{"app_demo"},false
+                new String[]{"tb_customer"},false
         );
     }
 
