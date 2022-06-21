@@ -49,8 +49,10 @@ public class TbCustomerController extends BaseController {
     private static final String LogModule = "TbCustomer";
 
     @GetMapping("/list.html")
-    public String list() {
-        return "cust/custinfo/list";
+    public ModelAndView list(ModelAndView mv) {
+        mv.addObject("citys", CityUtils.citys);
+        mv.setViewName("cust/custinfo/list");
+        return mv;
     }
 
     @RequestMapping("/add.html")
@@ -73,11 +75,13 @@ public class TbCustomerController extends BaseController {
 
     @RequestMapping("list")
     @PreAuthorize("hasAuthority('cust:custinfo:list')")
-    public ResponseEntity page(LayuiPage layuiPage,String parameterName) {
-        System.out.println("参数接收:"+parameterName);
+    public ResponseEntity page(LayuiPage layuiPage,String parameterName,String provinceId,Integer openStatus) {
+        System.out.println("参数接收:"+parameterName+"    省份Id："+provinceId+"   经营状态:"+openStatus);
         SystemCheckUtils.getInstance().checkMaxPage(layuiPage);
         IPage page = new Page<>(layuiPage.getPage(), layuiPage.getLimit());
         IPage<TbCustomer> page1 = entityService.lambdaQuery()
+                .eq(openStatus!=null,TbCustomer::getOpenStatus,openStatus)
+                .eq(StringUtils.isNotBlank(provinceId),TbCustomer::getProvince,provinceId)
                 .like(StringUtils.isNotBlank(parameterName),TbCustomer::getCustomerName, parameterName)
                 .or()
                 .like(StringUtils.isNotBlank(parameterName),TbCustomer::getLegalLeader, parameterName)
