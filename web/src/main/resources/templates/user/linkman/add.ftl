@@ -44,9 +44,13 @@
                     </div>
                 </div>
                 <div class="layui-col-lg6">
-                        <label class="layui-form-label">性别 1 男 0 女</label>
+                        <label class="layui-form-label">性别</label>
                     <div class="layui-input-block">
-                        <input type="text"  name="sex"  placeholder="请输入"  autocomplete="off" class="layui-input">
+                        <option value="">--请选择--</option>
+                        <select name="sex">
+                            <option value="1">男</option>
+                            <option value="0">女</option>
+                        </select>
                     </div>
                 </div>
                 <div class="layui-col-lg6">

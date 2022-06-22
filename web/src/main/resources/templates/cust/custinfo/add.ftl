@@ -46,7 +46,13 @@
                 <div class="layui-col-lg6">
                         <label class="layui-form-label">经营状态 0 开业、1 注销、2 破产。</label>
                     <div class="layui-input-block">
-                        <input type="text"  name="openStatus"  placeholder="请输入"  autocomplete="off" class="layui-input">
+                        <option value="">--请选择--</option>
+                        <select name="openStatus">
+                            <option value="0">开业</option>
+                            <option value="1">注销</option>
+                            <option value="2">破产</option>
+                        </select>
+<#--                        <input type="text"  name="openStatus"  placeholder="请输入"  autocomplete="off" class="layui-input">-->
                     </div>
                 </div>
                 <div class="layui-col-lg6">

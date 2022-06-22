@@ -23,7 +23,15 @@ layui.use(['form', 'layer', 'table', 'laytpl', 'laydate'], function () {
                     // {field: 'id', title:  'id', minWidth: 100, align: "center"},
                     // {field: 'custId', title: '客户id', minWidth: 100, align: "center"},
                     {field: 'linkman', title: '联系人名字', minWidth: 100, align: "center"},
-                    {field: 'sex', title: '性别 1 男 0 女', minWidth: 100, align: "center"},
+                    {field: 'sex', title: '性别', minWidth: 100, align: "center",
+                        templet: function (d) {
+                            if (d.sex == '0') {
+                                return "<button class=\"layui-btn layui-btn-normal layui-btn-xs sz-btn-sm\" style='cursor: default'>女</button>";
+                            } else if (d.sex == '1') {
+                                return "<button class=\"layui-btn layui-btn-danger layui-btn-xs sz-btn-sm\" style='cursor: default'>男</button>";
+                            } else
+                                return "<button class=\"layui-btn layui-btn-danger layui-btn-xs sz-btn-sm\" style='cursor: default'>未设置性别</button>";
+                        }},
                     {field: 'age', title: '年龄', minWidth: 100, align: "center"},
                     {field: 'phone', title: '联系人电话', minWidth: 100, align: "center"},
                     {field: 'position', title: '职位', minWidth: 100, align: "center"},
@@ -90,7 +98,25 @@ layui.use(['form', 'layer', 'table', 'laytpl', 'laydate'], function () {
                 content: web.rootPath() + 'linkman/add.html'
             });
         }
-        ;
+
+        //判断当前执行的是不是导出操作
+        if(obj.event==='export'){
+            var eix;
+            var url=web.rootPath()+ 'linkman/export';
+            $.fileDownload(url,{
+                httpMethod: 'POST',
+                prepareCallback: function (url){
+                    eix=layer.load(2);
+                },
+                successCallback: function (url){
+                    layer.close(eix);
+                },
+                failCallback: function (html,url){
+                    layer.close(eix);
+                    layer.msg("导出失败",{icon:2});
+                }
+            });
+        }
     });
     //监听工具条
     table.on('tool(List-toolbar)', function (obj) {

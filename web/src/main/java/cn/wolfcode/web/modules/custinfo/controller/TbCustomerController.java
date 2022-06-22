@@ -5,6 +5,8 @@ import cn.wolfcode.web.commons.utils.CityUtils;
 import cn.wolfcode.web.commons.utils.LayuiTools;
 import cn.wolfcode.web.commons.utils.SystemCheckUtils;
 import cn.wolfcode.web.modules.BaseController;
+import cn.wolfcode.web.modules.linkman.entity.TbCustLinkman;
+import cn.wolfcode.web.modules.linkman.service.ITbCustLinkmanService;
 import cn.wolfcode.web.modules.log.LogModules;
 import cn.wolfcode.web.modules.sys.entity.SysMenu;
 import cn.wolfcode.web.modules.sys.entity.SysUser;
@@ -20,6 +22,7 @@ import link.ahsj.core.annotations.SameUrlData;
 import link.ahsj.core.annotations.SysLog;
 import link.ahsj.core.annotations.UpdateGroup;
 import link.ahsj.core.entitys.ApiModel;
+import link.ahsj.core.exception.AppServerException;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpRequest;
@@ -45,6 +48,8 @@ public class TbCustomerController extends BaseController {
 
     @Autowired
     private ITbCustomerService entityService;
+    @Autowired
+    private ITbCustLinkmanService linkmanService;
 
     private static final String LogModule = "TbCustomer";
 
@@ -102,6 +107,12 @@ public class TbCustomerController extends BaseController {
         entity.setInputTime(LocalDateTime.now(ZoneOffset.of("+16")));
         SysUser loginUser = (SysUser) request.getSession().getAttribute(LoginForm.LOGIN_USER_KEY);
         entity.setInputUserId(loginUser.getUserId());
+        //判断是否同名
+        Integer count = entityService.lambdaQuery()
+                .eq(TbCustomer::getCustomerName, entity.getCustomerName()).count();
+        if(count>0){
+            throw new AppServerException("这个客户名已经存在！！！");
+        }
         entityService.save(entity);
         return ResponseEntity.ok(ApiModel.ok());
     }
@@ -114,6 +125,11 @@ public class TbCustomerController extends BaseController {
         entity.setUpdateTime(LocalDateTime.now(ZoneOffset.of("+16")));
         SysUser loginUser = (SysUser) request.getSession().getAttribute(LoginForm.LOGIN_USER_KEY);
         entity.setInputUserId(loginUser.getUserId());
+        Integer count = entityService.lambdaQuery()
+                .eq(TbCustomer::getCustomerName, entity.getCustomerName()).count();
+        if(count>0){
+            throw new AppServerException("这个客户名已经存在！！！");
+        }
         entityService.updateById(entity);
         return ResponseEntity.ok(ApiModel.ok());
     }
@@ -122,6 +138,8 @@ public class TbCustomerController extends BaseController {
     @DeleteMapping("delete/{id}")
     @PreAuthorize("hasAuthority('cust:custinfo:delete')")
     public ResponseEntity<ApiModel> delete(@PathVariable("id") String id) {
+        //将客户和与之关联的联系人一同删除
+        linkmanService.lambdaUpdate().eq(TbCustLinkman::getCustId,id).remove();
         entityService.removeById(id);
         return ResponseEntity.ok(ApiModel.ok());
     }
