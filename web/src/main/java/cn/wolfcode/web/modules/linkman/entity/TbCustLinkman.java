@@ -1,6 +1,7 @@
 package cn.wolfcode.web.modules.linkman.entity;
 
 import cn.afterturn.easypoi.excel.annotation.Excel;
+import com.baomidou.mybatisplus.annotation.TableField;
 
 import java.time.LocalDateTime;
 import java.io.Serializable;
@@ -76,6 +77,21 @@ public class TbCustLinkman implements Serializable {
      */
     @Excel(name="录入时间")
     private LocalDateTime inputTime;
+
+    /**
+     * 客户名字
+     */
+    @Excel(name="所属企业")
+    @TableField(exist = false)
+    private String custName;
+
+    public String getCustName() {
+        return custName;
+    }
+
+    public void setCustName(String custName) {
+        this.custName = custName;
+    }
 
     public String getId() {
         return id;

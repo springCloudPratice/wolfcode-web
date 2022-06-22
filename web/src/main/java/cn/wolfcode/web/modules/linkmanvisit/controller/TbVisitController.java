@@ -98,16 +98,18 @@ public class TbVisitController extends BaseController {
         +"(开始时间:"+start_date+") (结束时间:"+end_date+")");
         LocalDate beginDate = null;
         LocalDate afterDate = null;
-        if ((start_date!=null)&&(end_date!=null)){
-        beginDate = LocalDate.parse(start_date, DateTimeFormatter.ofPattern("yyyy-MM-dd"));
-        afterDate = LocalDate.parse(end_date, DateTimeFormatter.ofPattern("yyyy-MM-dd"));}
-
+        if ((StringUtils.isNotBlank(start_date))&&(StringUtils.isNotBlank(end_date))){
+        beginDate = LocalDate.parse(start_date, DateTimeFormatter.ofPattern("yyyy-MM-dd")).plusDays(1);
+        afterDate = LocalDate.parse(end_date, DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+        }
         SystemCheckUtils.getInstance().checkMaxPage(layuiPage);
         IPage page = new Page<>(layuiPage.getPage(), layuiPage.getLimit());
         IPage<TbVisit> page1 = entityService.lambdaQuery()
                 .like(StringUtils.isNotBlank(parameterName), TbVisit::getVisitReason, parameterName)
                 .eq(visitType != null, TbVisit::getVisitType, visitType)
-                .between((beginDate!=null)&&(afterDate!=null),TbVisit::getVisitDate,beginDate.plusDays(1),afterDate)
+                .between((beginDate!=null)&&(afterDate!=null)&&StringUtils.isNotBlank(start_date)
+                        &&StringUtils.isNotBlank(end_date)
+                        ,TbVisit::getVisitDate,beginDate,afterDate)
                 .page(page);
         List<TbVisit> records = page1.getRecords();
         for (TbVisit record : records) {

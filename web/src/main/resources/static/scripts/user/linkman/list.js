@@ -21,7 +21,7 @@ layui.use(['form', 'layer', 'table', 'laytpl', 'laydate'], function () {
         cols: [[
             {type: "checkbox", fixed: "left", width: 50},
                     // {field: 'id', title:  'id', minWidth: 100, align: "center"},
-                    // {field: 'custId', title: '客户id', minWidth: 100, align: "center"},
+                    {field: 'custName', title: '所属企业', minWidth: 100, align: "center"},
                     {field: 'linkman', title: '联系人名字', minWidth: 100, align: "center"},
                     {field: 'sex', title: '性别', minWidth: 100, align: "center",
                         templet: function (d) {
@@ -37,8 +37,8 @@ layui.use(['form', 'layer', 'table', 'laytpl', 'laydate'], function () {
                     {field: 'position', title: '职位', minWidth: 100, align: "center"},
                     {field: 'department', title: '部门', minWidth: 100, align: "center"},
                     {field: 'remark', title: '备注信息', minWidth: 100, align: "center"},
-                    {field: 'inputUser', title: '录入人', minWidth: 100, align: "center"},
-                    {field: 'inputTime', title: '录入时间', minWidth: 100, align: "center"},
+                    // {field: 'inputUser', title: '录入人', minWidth: 100, align: "center"},
+                    // {field: 'inputTime', title: '录入时间', minWidth: 100, align: "center"},
 
             {title: '操作', width: 160, templet: '#List-editBar', fixed: "right", align: "center"}
         ]],

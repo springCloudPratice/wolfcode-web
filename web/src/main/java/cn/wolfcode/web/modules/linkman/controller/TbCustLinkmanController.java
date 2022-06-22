@@ -104,6 +104,13 @@ public class TbCustLinkmanController extends BaseController {
                 .or()
                 .like(StringUtils.isNotBlank(parameterName),TbCustLinkman::getPhone, parameterName)
                 .page(page);
+        List<TbCustLinkman> records = page1.getRecords();
+        for (TbCustLinkman record : records) {
+            TbCustomer customer = customerService.getById(record.getCustId());
+            String customerName = customer.getCustomerName();
+            record.setCustName(customerName);
+        }
+
         return ResponseEntity.ok(LayuiTools.toLayuiTableModel(page1));
     }
 
