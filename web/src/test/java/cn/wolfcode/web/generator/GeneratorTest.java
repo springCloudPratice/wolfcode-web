@@ -33,16 +33,16 @@ public class GeneratorTest {
         GeneratorUtils.generator(
                 "web",
                 "cn.wolfcode.web.modules",
-                "linkman",
+                "linkmanvisit",
                 DbType.MYSQL,
                 "D:\\myProjectOnIdeaOrOthers\\wolfPjOutput",
                 // 页面上的父上下文
                 // 自己的上下文
                 "1111",
-                "关键联系人管理",
+                "联系人走访管理",
                 null,
-                "user",
                 "linkman",
+                "visit",
                 "姚鸿伟",
                 "127.0.0.1",
                 "3306",
@@ -50,7 +50,7 @@ public class GeneratorTest {
                 "root",
                 "motodroid4",
                 new String[]{"bmd_", "mp_", "SYS_"},
-                new String[]{"tb_cust_linkman"},false
+                new String[]{"tb_visit"},false
         );
     }
 

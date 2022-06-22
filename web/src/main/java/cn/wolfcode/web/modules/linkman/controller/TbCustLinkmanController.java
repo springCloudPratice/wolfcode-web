@@ -155,4 +155,15 @@ public class TbCustLinkmanController extends BaseController {
         PoiExportHelper.exportExcel(response,"客户联系人列表",workbook);
     }
 
+    @RequestMapping("listByCustomerId")
+    public ResponseEntity<ApiModel> listByCustomerId(String custId){
+        log.debug("企业id参数接收："+custId);
+        if(StringUtils.isBlank(custId)){
+            return ResponseEntity.ok(ApiModel.ok());
+        }
+        List<TbCustLinkman> list = entityService.lambdaQuery().eq(TbCustLinkman::getCustId, custId).list();
+        return ResponseEntity.ok(ApiModel.data(list));
+
+    }
+
 }
