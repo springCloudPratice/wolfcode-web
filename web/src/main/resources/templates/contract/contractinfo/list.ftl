@@ -18,7 +18,7 @@
     <div class="layui-row layui-col-space15">
         <div class="layui-col-md12">
             <div class="layui-card">
-                <@sec.authenticate grants="linkman:visit:list">
+                <@sec.authenticate grants="contract:contractinfo:list">
 
                     <!-- 搜索条件start -->
                     <form class="layui-form layui-card-header layuiadmin-card-header-auto"
@@ -32,35 +32,37 @@
                                            class="layui-input">
                                 </div>
                             </div>
-
                             <div class="layui-inline">
-                                <label class="layui-form-label">拜访方式</label>
+                                <label class="layui-form-label">是否作废</label>
                                 <div class="layui-input-block input-box">
-                                    <select name="visitType">
+                                    <select name="nullifyStatus">
                                         <option value="">--请选择--</option>
-                                        <option value="1">上门拜访</option>
-                                        <option value="2">电话拜访</option>
+                                        <option value="0">在用</option>
+                                        <option value="1">作废</option>
                                     </select>
                                 </div>
                             </div>
-
                             <div class="layui-inline">
-                                <label class="layui-form-label">拜访时间</label>
+                                <label class="layui-form-label">审核状态</label>
                                 <div class="layui-input-block input-box">
-<#--                                    <div class="layui-input-block">-->
-                                        <input type="text"  name="start_date"  id="visitDate1" placeholder="请输入开始时间"  autocomplete="off" class="layui-input">
-<#--                                    </div>-->
+                                    <select name="auditStatus">
+                                        <option value="">--请选择--</option>
+                                        <option value="0">未审核</option>
+                                        <option value="1">审核通过</option>
+                                        <option value="-1">审核不通过</option>
+                                    </select>
                                 </div>
                             </div>
-
                             <div class="layui-inline">
+                                <label class="layui-form-label">是否盖章确认</label>
                                 <div class="layui-input-block input-box">
-<#--                                    <div class="layui-input-block">-->
-                                        <input type="text"  name="end_date"  id="visitDate2" placeholder="请输入结束时间"  autocomplete="off" class="layui-input">
-<#--                                    </div>-->
+                                    <select name="affixSealStatus">
+                                        <option value="">--请选择--</option>
+                                        <option value="0">否</option>
+                                        <option value="1">是</option>
+                                    </select>
                                 </div>
                             </div>
-
 
                             <div class="layui-inline">
                                 <button type="button" class="layui-btn layui-btn-normal" id="SearchBtn"
@@ -80,7 +82,7 @@
 
                     <script type="text/html" id="List-toolbar">
                         <div class="layui-btn-container">
-                            <@sec.authenticate grants="linkman:visit:add">
+                            <@sec.authenticate grants="contract:contractinfo:add">
                                 <button class="layui-btn layui-btn-sm layui-btn-primary"
                                         lay-event="add"><i class="layui-icon">&#xe654;</i>新增
                                 </button>
@@ -89,11 +91,11 @@
                     </script>
 
                     <script type="text/html" id="List-editBar">
-                        <@sec.authenticate grants="linkman:visit:update">
+                        <@sec.authenticate grants="contract:contractinfo:update">
                             <a class="layui-btn layui-btn-xs layui-btn-primary" lay-event="update"><i
                                         class="layui-icon">&#xe642;</i>修改</a>
                         </@sec.authenticate>
-                        <@sec.authenticate grants="linkman:visit:delete">
+                        <@sec.authenticate grants="contract:contractinfo:delete">
                             <a class="layui-btn layui-btn-xs layui-btn-primary" lay-event="delete"><i
                                         class="layui-icon">&#xe640;</i>删除</a>
                         </@sec.authenticate>
@@ -108,6 +110,6 @@
 <script src="${request.contextPath}/layuiadmin/layui/layui.js"></script>
 <script src="${request.contextPath}/layui-extend.js"></script>
 <script src="${request.contextPath}/webjars/jquery/jquery.min.js"></script>
-<script type="text/javascript" src="${request.contextPath}/scripts/linkman/visit/list.js?_=${randomNum}"></script>
+<script type="text/javascript" src="${request.contextPath}/scripts/contract/contractinfo/list.js?_=${randomNum}"></script>
 </body>
 </html>
