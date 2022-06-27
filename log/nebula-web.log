@@ -1,8 +1,106 @@
-2022-06-24 00:04:01.538 [lettuce-eventExecutorLoop-1-3] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 49.235.85.30:6379
-2022-06-24 00:04:01.538 [lettuce-eventExecutorLoop-1-4] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 49.235.85.30:6379
-2022-06-24 00:04:01.538 [lettuce-nioEventLoop-4-2] WARN  io.lettuce.core.protocol.ConnectionWatchdog - Cannot reconnect to [49.235.85.30:6379]: No route to host: no further information: /49.235.85.30:6379
-io.netty.channel.AbstractChannel$AnnotatedNoRouteToHostException: No route to host: no further information: /49.235.85.30:6379
-Caused by: java.net.NoRouteToHostException: No route to host: no further information
+2022-06-27 11:34:35.279 [main] INFO  cn.wolfcode.WebApplication - Starting WebApplication on WIN-D2EISKISGKK with PID 2004 (D:\myProjectOnIdeaOrOthers\wolfcode-web\wolfcode-web\web\target\classes started by 鸿伟 in D:\myProjectOnIdeaOrOthers\wolfcode-web\wolfcode-web)
+2022-06-27 11:34:35.279 [main] DEBUG cn.wolfcode.WebApplication - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2022-06-27 11:34:35.279 [main] INFO  cn.wolfcode.WebApplication - The following profiles are active: dev
+2022-06-27 11:34:38.108 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-06-27 11:34:38.124 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-06-27 11:34:38.186 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 57ms. Found 0 Redis repository interfaces.
+2022-06-27 11:34:38.827 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration$DataSourceTransactionManagerConfiguration' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration$DataSourceTransactionManagerConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 11:34:38.842 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure' of type [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure$$EnhancerBySpringCGLIB$$5babd3b5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 11:34:38.842 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2022-06-27 11:34:38.920 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 11:34:38.936 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidFilterConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidFilterConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 11:34:38.967 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'statFilter' of type [com.alibaba.druid.filter.stat.StatFilter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 11:34:39.108 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'wallConfig' of type [com.alibaba.druid.wall.WallConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 11:34:39.139 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'wallFilter' of type [com.alibaba.druid.wall.WallFilter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 11:34:39.280 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2022-06-27 11:34:39.280 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'dataSource' of type [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceWrapper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 11:34:39.358 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 11:34:39.373 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration' of type [org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 11:34:39.373 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.transaction-org.springframework.boot.autoconfigure.transaction.TransactionProperties' of type [org.springframework.boot.autoconfigure.transaction.TransactionProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 11:34:39.373 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'platformTransactionManagerCustomizers' of type [org.springframework.boot.autoconfigure.transaction.TransactionManagerCustomizers] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 11:34:39.389 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'transactionManager' of type [org.springframework.jdbc.datasource.DataSourceTransactionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 11:34:39.405 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'transactionAdviceConfig' of type [cn.wolfcode.web.commons.config.TransactionAdviceConfig$$EnhancerBySpringCGLIB$$24aa44e0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 11:34:39.405 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'txAdvice' of type [org.springframework.transaction.interceptor.TransactionInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 11:34:39.405 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'txAdviceAdvisor' of type [org.springframework.aop.support.DefaultPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 11:34:39.421 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 11:34:39.436 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 11:34:39.436 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@76973a6' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 11:34:39.436 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 11:34:39.452 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 11:34:39.827 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2022-06-27 11:34:39.842 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2022-06-27 11:34:39.842 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-06-27 11:34:39.842 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.31]
+2022-06-27 11:34:39.983 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/nebula-web] - Initializing Spring embedded WebApplicationContext
+2022-06-27 11:34:39.983 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4516 ms
+2022-06-27 11:34:40.889 [main] WARN  com.baomidou.mybatisplus.core.metadata.TableInfoHelper - Warn: Could not find @TableId in Class: cn.wolfcode.web.modules.sys.entity.SysRoleByMenu.
+2022-06-27 11:34:42.108 [main] INFO  org.springframework.boot.web.servlet.RegistrationBean - Filter loginInterceptor was not registered (disabled)
+2022-06-27 11:34:42.936 [main] WARN  com.baomidou.mybatisplus.core.metadata.TableInfoHelper - Warn: Could not find @TableId in Class: cn.wolfcode.web.modules.sys.entity.SysUserRole.
+2022-06-27 11:34:43.311 [main] INFO  o.s.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: b61e1c5d-ff82-4f86-bfdc-5d8139500313
+
+2022-06-27 11:34:43.389 [main] INFO  org.springframework.security.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/{spring:^(static|druid|images|sign|druid|error)$}/**'], []
+2022-06-27 11:34:43.389 [main] INFO  org.springframework.security.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/**/{spring:^.*\.((?!html).)*$}'], []
+2022-06-27 11:34:43.468 [main] INFO  org.springframework.security.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@533d7c61, org.springframework.security.web.context.SecurityContextPersistenceFilter@5cc075da, org.springframework.security.web.header.HeaderWriterFilter@3700994c, org.springframework.security.web.authentication.logout.LogoutFilter@637d111d, cn.wolfcode.web.commons.interceptors.LoginInterceptor@563172d3, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@e2f6e13, org.springframework.security.web.session.ConcurrentSessionFilter@ba87c11, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7fa85a55, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7b5c9412, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@53c40ed6, org.springframework.security.web.session.SessionManagementFilter@4eb48298, org.springframework.security.web.access.ExceptionTranslationFilter@6bfbab1c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@21ce3b22]
+2022-06-27 11:34:43.499 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'clientInboundChannelExecutor'
+2022-06-27 11:34:43.515 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'clientOutboundChannelExecutor'
+2022-06-27 11:34:43.530 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'messageBrokerTaskScheduler'
+2022-06-27 11:34:43.608 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'brokerChannelExecutor'
+2022-06-27 11:34:43.999 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2022-06-27 11:34:44.936 [main] INFO  io.lettuce.core.EpollProvider - Starting without optional epoll library
+2022-06-27 11:34:44.952 [main] INFO  io.lettuce.core.KqueueProvider - Starting without optional kqueue library
+2022-06-27 11:34:47.531 [main] WARN  o.s.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'enableRedisKeyspaceNotificationsInitializer' defined in class path resource [org/springframework/boot/autoconfigure/session/RedisSessionConfiguration$SpringBootRedisHttpSessionConfiguration.class]: Invocation of init method failed; nested exception is org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to 49.235.85.30:6379
+2022-06-27 11:34:47.531 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'brokerChannelExecutor'
+2022-06-27 11:34:47.531 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'messageBrokerTaskScheduler'
+2022-06-27 11:34:47.531 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'clientOutboundChannelExecutor'
+2022-06-27 11:34:47.531 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'clientInboundChannelExecutor'
+2022-06-27 11:34:47.672 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2022-06-27 11:34:47.687 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2022-06-27 11:34:47.687 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2022-06-27 11:34:47.703 [main] INFO  o.s.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-06-27 11:34:47.703 [main] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'enableRedisKeyspaceNotificationsInitializer' defined in class path resource [org/springframework/boot/autoconfigure/session/RedisSessionConfiguration$SpringBootRedisHttpSessionConfiguration.class]: Invocation of init method failed; nested exception is org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to 49.235.85.30:6379
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at cn.wolfcode.WebApplication.main(WebApplication.java:26)
+Caused by: org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to 49.235.85.30:6379
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getNativeConnection(LettuceConnectionFactory.java:1199)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getConnection(LettuceConnectionFactory.java:1178)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getSharedConnection(LettuceConnectionFactory.java:942)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getConnection(LettuceConnectionFactory.java:353)
+	at org.springframework.session.data.redis.config.annotation.web.http.RedisHttpSessionConfiguration$EnableRedisKeyspaceNotificationsInitializer.afterPropertiesSet(RedisHttpSessionConfiguration.java:331)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1855)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1792)
+	... 16 common frames omitted
+Caused by: io.lettuce.core.RedisConnectionException: Unable to connect to 49.235.85.30:6379
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:78)
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:56)
+	at io.lettuce.core.AbstractRedisClient.getConnection(AbstractRedisClient.java:234)
+	at io.lettuce.core.RedisClient.connect(RedisClient.java:207)
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.lambda$getConnection$1(StandaloneConnectionProvider.java:115)
+	at java.base/java.util.Optional.orElseGet(Optional.java:369)
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.getConnection(StandaloneConnectionProvider.java:115)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getNativeConnection(LettuceConnectionFactory.java:1197)
+	... 22 common frames omitted
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /49.235.85.30:6379
+Caused by: java.net.ConnectException: Connection refused: no further information
 	at java.base/sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
 	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:779)
 	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:330)
@@ -15,66 +113,819 @@ Caused by: java.net.NoRouteToHostException: No route to host: no further informa
 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
 	at java.base/java.lang.Thread.run(Thread.java:834)
-2022-06-24 00:04:01.544 [lettuce-eventExecutorLoop-1-3] WARN  io.lettuce.core.protocol.ConnectionWatchdog - Cannot reconnect to [49.235.85.30:6379]: No route to host: no further information: /49.235.85.30:6379
-io.netty.channel.AbstractChannel$AnnotatedNoRouteToHostException: No route to host: no further information: /49.235.85.30:6379
-Caused by: java.net.NoRouteToHostException: No route to host: no further information
-	at java.base/sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
-	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:779)
-	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:330)
-	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:702)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-2022-06-24 00:04:11.998 [MessageBroker-2] INFO  org.springframework.web.socket.config.WebSocketMessageBrokerStats - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 4, active threads = 2, queued tasks = 0, completed tasks = 135]
-2022-06-24 00:04:17.004 [MessageBroker-1] ERROR org.springframework.scheduling.support.TaskUtils$LoggingErrorHandler - Unexpected error occurred in scheduled task
-org.springframework.dao.QueryTimeoutException: Redis command timed out; nested exception is io.lettuce.core.RedisCommandTimeoutException: Command timed out after 5 second(s)
-	at org.springframework.data.redis.connection.lettuce.LettuceExceptionConverter.convert(LettuceExceptionConverter.java:70)
-	at org.springframework.data.redis.connection.lettuce.LettuceExceptionConverter.convert(LettuceExceptionConverter.java:41)
-	at org.springframework.data.redis.PassThroughExceptionTranslationStrategy.translate(PassThroughExceptionTranslationStrategy.java:44)
-	at org.springframework.data.redis.FallbackExceptionTranslationStrategy.translate(FallbackExceptionTranslationStrategy.java:42)
-	at org.springframework.data.redis.connection.lettuce.LettuceConnection.convertLettuceAccessException(LettuceConnection.java:270)
-	at org.springframework.data.redis.connection.lettuce.LettuceSetCommands.convertLettuceAccessException(LettuceSetCommands.java:520)
-	at org.springframework.data.redis.connection.lettuce.LettuceSetCommands.sMembers(LettuceSetCommands.java:245)
-	at org.springframework.data.redis.connection.DefaultedRedisConnection.sMembers(DefaultedRedisConnection.java:729)
-	at org.springframework.data.redis.core.DefaultSetOperations.lambda$members$10(DefaultSetOperations.java:214)
-	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:228)
-	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:188)
-	at org.springframework.data.redis.core.AbstractOperations.execute(AbstractOperations.java:96)
-	at org.springframework.data.redis.core.DefaultSetOperations.members(DefaultSetOperations.java:214)
-	at org.springframework.data.redis.core.DefaultBoundSetOperations.members(DefaultBoundSetOperations.java:152)
-	at org.springframework.session.data.redis.RedisSessionExpirationPolicy.cleanExpiredSessions(RedisSessionExpirationPolicy.java:129)
-	at org.springframework.session.data.redis.RedisIndexedSessionRepository.cleanupExpiredSessions(RedisIndexedSessionRepository.java:407)
-	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
-	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-Caused by: io.lettuce.core.RedisCommandTimeoutException: Command timed out after 5 second(s)
+2022-06-27 11:41:57.381 [main] INFO  cn.wolfcode.WebApplication - Starting WebApplication on WIN-D2EISKISGKK with PID 6404 (D:\myProjectOnIdeaOrOthers\wolfcode-web\wolfcode-web\web\target\classes started by 鸿伟 in D:\myProjectOnIdeaOrOthers\wolfcode-web\wolfcode-web)
+2022-06-27 11:41:57.381 [main] DEBUG cn.wolfcode.WebApplication - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2022-06-27 11:41:57.381 [main] INFO  cn.wolfcode.WebApplication - The following profiles are active: dev
+2022-06-27 11:41:58.777 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-06-27 11:41:58.780 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-06-27 11:41:58.869 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 71ms. Found 0 Redis repository interfaces.
+2022-06-27 11:41:59.712 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration$DataSourceTransactionManagerConfiguration' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration$DataSourceTransactionManagerConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 11:41:59.725 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure' of type [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure$$EnhancerBySpringCGLIB$$82ca4920] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 11:41:59.739 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2022-06-27 11:41:59.881 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 11:41:59.897 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidFilterConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidFilterConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 11:41:59.943 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'statFilter' of type [com.alibaba.druid.filter.stat.StatFilter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 11:42:00.121 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'wallConfig' of type [com.alibaba.druid.wall.WallConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 11:42:00.159 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'wallFilter' of type [com.alibaba.druid.wall.WallFilter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 11:42:00.325 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2022-06-27 11:42:00.325 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'dataSource' of type [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceWrapper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 11:42:00.403 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 11:42:00.430 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration' of type [org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 11:42:00.438 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.transaction-org.springframework.boot.autoconfigure.transaction.TransactionProperties' of type [org.springframework.boot.autoconfigure.transaction.TransactionProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 11:42:00.441 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'platformTransactionManagerCustomizers' of type [org.springframework.boot.autoconfigure.transaction.TransactionManagerCustomizers] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 11:42:00.448 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'transactionManager' of type [org.springframework.jdbc.datasource.DataSourceTransactionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 11:42:00.449 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'transactionAdviceConfig' of type [cn.wolfcode.web.commons.config.TransactionAdviceConfig$$EnhancerBySpringCGLIB$$4bc8ba4b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 11:42:00.449 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'txAdvice' of type [org.springframework.transaction.interceptor.TransactionInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 11:42:00.449 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'txAdviceAdvisor' of type [org.springframework.aop.support.DefaultPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 11:42:00.474 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 11:42:00.496 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 11:42:00.501 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@54c425b1' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 11:42:00.504 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 11:42:00.521 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 11:42:00.864 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2022-06-27 11:42:00.880 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2022-06-27 11:42:00.880 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-06-27 11:42:00.880 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.31]
+2022-06-27 11:42:01.020 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/nebula-web] - Initializing Spring embedded WebApplicationContext
+2022-06-27 11:42:01.020 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3561 ms
+2022-06-27 11:42:01.755 [main] WARN  com.baomidou.mybatisplus.core.metadata.TableInfoHelper - Warn: Could not find @TableId in Class: cn.wolfcode.web.modules.sys.entity.SysRoleByMenu.
+2022-06-27 11:42:02.935 [main] INFO  org.springframework.boot.web.servlet.RegistrationBean - Filter loginInterceptor was not registered (disabled)
+2022-06-27 11:42:03.854 [main] WARN  com.baomidou.mybatisplus.core.metadata.TableInfoHelper - Warn: Could not find @TableId in Class: cn.wolfcode.web.modules.sys.entity.SysUserRole.
+2022-06-27 11:42:04.291 [main] INFO  o.s.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 579fc7be-069a-4747-85ff-6fc599c7f92f
+
+2022-06-27 11:42:04.354 [main] INFO  org.springframework.security.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/{spring:^(static|druid|images|sign|druid|error)$}/**'], []
+2022-06-27 11:42:04.354 [main] INFO  org.springframework.security.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/**/{spring:^.*\.((?!html).)*$}'], []
+2022-06-27 11:42:04.442 [main] INFO  org.springframework.security.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@40fcaae7, org.springframework.security.web.context.SecurityContextPersistenceFilter@62c47480, org.springframework.security.web.header.HeaderWriterFilter@7816454d, org.springframework.security.web.authentication.logout.LogoutFilter@45f95ac0, cn.wolfcode.web.commons.interceptors.LoginInterceptor@7e8f23ad, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@24f3fb87, org.springframework.security.web.session.ConcurrentSessionFilter@8585cdd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7074da1d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4e14d520, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7fa85a55, org.springframework.security.web.session.SessionManagementFilter@54e18a46, org.springframework.security.web.access.ExceptionTranslationFilter@78e97d4d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@64ef2719]
+2022-06-27 11:42:04.488 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'clientInboundChannelExecutor'
+2022-06-27 11:42:04.513 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'clientOutboundChannelExecutor'
+2022-06-27 11:42:04.528 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'messageBrokerTaskScheduler'
+2022-06-27 11:42:04.593 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'brokerChannelExecutor'
+2022-06-27 11:42:04.984 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2022-06-27 11:42:06.042 [main] INFO  io.lettuce.core.EpollProvider - Starting without optional epoll library
+2022-06-27 11:42:06.044 [main] INFO  io.lettuce.core.KqueueProvider - Starting without optional kqueue library
+2022-06-27 11:42:07.559 [main] INFO  org.springframework.messaging.simp.broker.SimpleBrokerMessageHandler - Starting...
+2022-06-27 11:42:07.559 [main] INFO  org.springframework.messaging.simp.broker.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2022-06-27 11:42:07.559 [main] INFO  org.springframework.messaging.simp.broker.SimpleBrokerMessageHandler - Started.
+2022-06-27 11:42:08.653 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2022-06-27 11:42:08.669 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path '/nebula-web'
+2022-06-27 11:42:08.669 [main] INFO  cn.wolfcode.WebApplication - Started WebApplication in 11.956 seconds (JVM running for 13.39)
+2022-06-27 11:43:04.600 [MessageBroker-2] INFO  org.springframework.web.socket.config.WebSocketMessageBrokerStats - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 3, active threads = 1, queued tasks = 1, completed tasks = 1]
+2022-06-27 11:48:57.118 [SpringContextShutdownHook] INFO  org.springframework.messaging.simp.broker.SimpleBrokerMessageHandler - Stopping...
+2022-06-27 11:48:57.118 [SpringContextShutdownHook] INFO  org.springframework.messaging.simp.broker.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2022-06-27 11:48:57.118 [SpringContextShutdownHook] INFO  org.springframework.messaging.simp.broker.SimpleBrokerMessageHandler - Stopped.
+2022-06-27 11:48:57.258 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'brokerChannelExecutor'
+2022-06-27 11:48:57.258 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'messageBrokerTaskScheduler'
+2022-06-27 11:48:57.258 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'clientOutboundChannelExecutor'
+2022-06-27 11:48:57.258 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'clientInboundChannelExecutor'
+2022-06-27 11:48:57.477 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2022-06-27 11:48:57.493 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2022-06-27 11:49:13.348 [main] INFO  cn.wolfcode.WebApplication - Starting WebApplication on WIN-D2EISKISGKK with PID 14732 (D:\myProjectOnIdeaOrOthers\wolfcode-web\wolfcode-web\web\target\classes started by 鸿伟 in D:\myProjectOnIdeaOrOthers\wolfcode-web\wolfcode-web)
+2022-06-27 11:49:13.348 [main] DEBUG cn.wolfcode.WebApplication - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2022-06-27 11:49:13.348 [main] INFO  cn.wolfcode.WebApplication - The following profiles are active: dev
+2022-06-27 11:49:14.687 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-06-27 11:49:14.687 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-06-27 11:49:14.765 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 64ms. Found 0 Redis repository interfaces.
+2022-06-27 11:49:15.656 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration$DataSourceTransactionManagerConfiguration' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration$DataSourceTransactionManagerConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 11:49:15.671 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure' of type [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure$$EnhancerBySpringCGLIB$$ec666968] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 11:49:15.671 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2022-06-27 11:49:15.765 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 11:49:15.765 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidFilterConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidFilterConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 11:49:15.796 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'statFilter' of type [com.alibaba.druid.filter.stat.StatFilter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 11:49:15.921 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'wallConfig' of type [com.alibaba.druid.wall.WallConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 11:49:15.952 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'wallFilter' of type [com.alibaba.druid.wall.WallFilter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 11:49:16.131 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2022-06-27 11:49:16.131 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'dataSource' of type [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceWrapper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 11:49:16.225 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 11:49:16.240 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration' of type [org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 11:49:16.240 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.transaction-org.springframework.boot.autoconfigure.transaction.TransactionProperties' of type [org.springframework.boot.autoconfigure.transaction.TransactionProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 11:49:16.240 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'platformTransactionManagerCustomizers' of type [org.springframework.boot.autoconfigure.transaction.TransactionManagerCustomizers] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 11:49:16.256 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'transactionManager' of type [org.springframework.jdbc.datasource.DataSourceTransactionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 11:49:16.256 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'transactionAdviceConfig' of type [cn.wolfcode.web.commons.config.TransactionAdviceConfig$$EnhancerBySpringCGLIB$$b564da93] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 11:49:16.271 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'txAdvice' of type [org.springframework.transaction.interceptor.TransactionInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 11:49:16.271 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'txAdviceAdvisor' of type [org.springframework.aop.support.DefaultPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 11:49:16.287 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 11:49:16.303 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 11:49:16.318 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@d653e41' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 11:49:16.318 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 11:49:16.334 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 11:49:16.740 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2022-06-27 11:49:16.756 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2022-06-27 11:49:16.756 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-06-27 11:49:16.756 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.31]
+2022-06-27 11:49:16.896 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/nebula-web] - Initializing Spring embedded WebApplicationContext
+2022-06-27 11:49:16.896 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3470 ms
+2022-06-27 11:49:17.730 [main] WARN  com.baomidou.mybatisplus.core.metadata.TableInfoHelper - Warn: Could not find @TableId in Class: cn.wolfcode.web.modules.sys.entity.SysRoleByMenu.
+2022-06-27 11:49:18.996 [main] INFO  org.springframework.boot.web.servlet.RegistrationBean - Filter loginInterceptor was not registered (disabled)
+2022-06-27 11:49:19.971 [main] WARN  com.baomidou.mybatisplus.core.metadata.TableInfoHelper - Warn: Could not find @TableId in Class: cn.wolfcode.web.modules.sys.entity.SysUserRole.
+2022-06-27 11:49:20.559 [main] INFO  o.s.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 0d4a2dde-7686-4c91-ae65-323b0ee492d9
+
+2022-06-27 11:49:20.653 [main] INFO  org.springframework.security.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/{spring:^(static|druid|images|sign|druid|error)$}/**'], []
+2022-06-27 11:49:20.653 [main] INFO  org.springframework.security.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/**/{spring:^.*\.((?!html).)*$}'], []
+2022-06-27 11:49:20.747 [main] INFO  org.springframework.security.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@23c00420, org.springframework.security.web.context.SecurityContextPersistenceFilter@44a13699, org.springframework.security.web.header.HeaderWriterFilter@9cb927e, org.springframework.security.web.authentication.logout.LogoutFilter@7891cf3, cn.wolfcode.web.commons.interceptors.LoginInterceptor@53dba9cd, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7b5c9412, org.springframework.security.web.session.ConcurrentSessionFilter@7db06c50, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3ee68377, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@b787274, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@22f046b, org.springframework.security.web.session.SessionManagementFilter@1325f967, org.springframework.security.web.access.ExceptionTranslationFilter@11b14ae3, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2ff8d39b]
+2022-06-27 11:49:20.793 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'clientInboundChannelExecutor'
+2022-06-27 11:49:20.825 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'clientOutboundChannelExecutor'
+2022-06-27 11:49:20.840 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'messageBrokerTaskScheduler'
+2022-06-27 11:49:20.918 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'brokerChannelExecutor'
+2022-06-27 11:49:21.450 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2022-06-27 11:49:22.449 [main] INFO  io.lettuce.core.EpollProvider - Starting without optional epoll library
+2022-06-27 11:49:22.449 [main] INFO  io.lettuce.core.KqueueProvider - Starting without optional kqueue library
+2022-06-27 11:49:23.075 [main] INFO  org.springframework.messaging.simp.broker.SimpleBrokerMessageHandler - Starting...
+2022-06-27 11:49:23.075 [main] INFO  org.springframework.messaging.simp.broker.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2022-06-27 11:49:23.075 [main] INFO  org.springframework.messaging.simp.broker.SimpleBrokerMessageHandler - Started.
+2022-06-27 11:49:23.637 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2022-06-27 11:49:23.653 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path '/nebula-web'
+2022-06-27 11:49:23.653 [main] INFO  cn.wolfcode.WebApplication - Started WebApplication in 11.03 seconds (JVM running for 12.506)
+2022-06-27 11:49:28.650 [http-nio-8888-exec-1] INFO  org.apache.tomcat.util.http.parser.Cookie - A cookie header was received [1655475215] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2022-06-27 11:49:28.663 [http-nio-8888-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/nebula-web] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-27 11:49:28.663 [http-nio-8888-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-06-27 11:49:28.687 [http-nio-8888-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 24 ms
+2022-06-27 11:49:28.727 [http-nio-8888-exec-1] DEBUG cn.wolfcode.web.commons.interceptors.LoginInterceptor - 当前访问接口:/
+2022-06-27 11:49:33.565 [http-nio-8888-exec-5] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserOperationLogMapper.insert - ==>  Preparing: INSERT INTO SYS_USER_OPERATION_LOG ( ID, USER_NAME, OPERATION_MODULE, OPERATION_TYPE, VISIT_METHOD, PARAMETERS, IP_ADDRESS, DURATION, OPERATION_TIME ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
+2022-06-27 11:49:33.677 [http-nio-8888-exec-5] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserOperationLogMapper.insert - ==> Parameters: 886d9bdefedbe0f9803af825ad2202c4(String), Anonymous(String), 登录模块(String), 登录验证码(String), captcha(String), {}(String), 127.0.0.1(String), 1835(Long), 2022-06-27T11:49:33.511773500(LocalDateTime)
+2022-06-27 11:49:33.696 [http-nio-8888-exec-5] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserOperationLogMapper.insert - <==    Updates: 1
+2022-06-27 11:49:35.131 [http-nio-8888-exec-6] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectOne - ==>  Preparing: SELECT user_id,username,password,old_password,nick_name,phone,email,disable,login_status,create_user_id,create_time,update_time,delete_time,login_time,remark,dept_id FROM SYS_USER_INFO WHERE (username = ?) 
+2022-06-27 11:49:35.161 [http-nio-8888-exec-6] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectOne - ==> Parameters: admin(String)
+2022-06-27 11:49:35.191 [http-nio-8888-exec-6] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectOne - <==      Total: 1
+2022-06-27 11:49:35.203 [http-nio-8888-exec-6] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.updateById - ==>  Preparing: UPDATE SYS_USER_INFO SET username=?, password=?, old_password=?, nick_name=?, phone=?, email=?, disable=?, login_status=?, create_user_id=?, create_time=?, update_time=?, delete_time=?, login_time=?, dept_id=? WHERE user_id=? 
+2022-06-27 11:49:35.210 [http-nio-8888-exec-6] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.updateById - ==> Parameters: admin(String), 98124e2a4b96dc88ba01d49345f62a07(String), 98124e2a4b96dc88ba01d49345f62a07(String), admin(String), 13000001112(String), admin@163.com(String), 0(Integer), 0(Integer), (String), 2019-02-15T00:26:39(LocalDateTime), 2019-07-28T03:26:17(LocalDateTime), 2019-07-29T09:18:27(LocalDateTime), 2022-06-27T11:49:35.198826400(LocalDateTime), OR1200000703(String), 1115864462813077506(String)
+2022-06-27 11:49:35.212 [http-nio-8888-exec-6] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.updateById - <==    Updates: 1
+2022-06-27 11:49:35.219 [http-nio-8888-exec-6] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserLoginLogMapper.insert - ==>  Preparing: INSERT INTO SYS_USER_LOGIN_LOG ( ID, USER_NAME, LOGIN_TIME, IP_ADDRESS, DURATION ) VALUES ( ?, ?, ?, ?, ? ) 
+2022-06-27 11:49:35.221 [http-nio-8888-exec-6] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserLoginLogMapper.insert - ==> Parameters: dc353711c9c03fdf0bd062412418439d(String), admin(String), 2022-06-27T11:49:35.059296300(LocalDateTime), 127.0.0.1(String), 0(Long)
+2022-06-27 11:49:35.226 [http-nio-8888-exec-6] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserLoginLogMapper.insert - <==    Updates: 1
+2022-06-27 11:49:35.232 [http-nio-8888-exec-6] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserOperationLogMapper.insert - ==>  Preparing: INSERT INTO SYS_USER_OPERATION_LOG ( ID, USER_NAME, OPERATION_MODULE, OPERATION_TYPE, VISIT_METHOD, PARAMETERS, IP_ADDRESS, DURATION, OPERATION_TIME ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
+2022-06-27 11:49:35.232 [http-nio-8888-exec-6] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserOperationLogMapper.insert - ==> Parameters: 8b4570522a6a5d29f00b67cf3e06f56a(String), admin(String), 登录模块(String), 用户登录(String), login(String), {}(String), 127.0.0.1(String), 212(Long), 2022-06-27T11:49:35.232038800(LocalDateTime)
+2022-06-27 11:49:35.232 [http-nio-8888-exec-6] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserOperationLogMapper.insert - <==    Updates: 1
+2022-06-27 11:49:35.787 [http-nio-8888-exec-7] DEBUG cn.wolfcode.web.commons.interceptors.LoginInterceptor - 当前访问接口:/
+2022-06-27 11:49:35.788 [http-nio-8888-exec-7] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==>  Preparing: SELECT user_id,username,password,old_password,nick_name,phone,email,disable,login_status,create_user_id,create_time,update_time,delete_time,login_time,remark,dept_id FROM SYS_USER_INFO WHERE user_id=? 
+2022-06-27 11:49:35.790 [http-nio-8888-exec-7] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==> Parameters: 1115864462813077506(String)
+2022-06-27 11:49:35.793 [http-nio-8888-exec-7] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - <==      Total: 1
+2022-06-27 11:49:35.869 [http-nio-8888-exec-7] DEBUG cn.wolfcode.web.modules.sys.mapper.SysMenuMapper.selectList - ==>  Preparing: SELECT menu_id,menu_name,parent_menu_code,menu_icon,menu_type,sort,menu_code,menu_url,authorization,disable FROM SYS_MENU_INFO ORDER BY SORT DESC 
+2022-06-27 11:49:35.872 [http-nio-8888-exec-7] DEBUG cn.wolfcode.web.modules.sys.mapper.SysMenuMapper.selectList - ==> Parameters: 
+2022-06-27 11:49:35.903 [http-nio-8888-exec-7] DEBUG cn.wolfcode.web.modules.sys.mapper.SysMenuMapper.selectList - <==      Total: 103
+2022-06-27 11:49:35.993 [http-nio-8888-exec-7] DEBUG cn.wolfcode.web.modules.sys.mapper.SysMenuMapper.selectList - ==>  Preparing: SELECT menu_id,menu_name,parent_menu_code,menu_icon,menu_type,sort,menu_code,menu_url,authorization,disable FROM SYS_MENU_INFO ORDER BY SORT DESC 
+2022-06-27 11:49:35.994 [http-nio-8888-exec-7] DEBUG cn.wolfcode.web.modules.sys.mapper.SysMenuMapper.selectList - ==> Parameters: 
+2022-06-27 11:49:36.008 [http-nio-8888-exec-7] DEBUG cn.wolfcode.web.modules.sys.mapper.SysMenuMapper.selectList - <==      Total: 103
+2022-06-27 11:49:37.016 [http-nio-8888-exec-9] DEBUG cn.wolfcode.web.commons.interceptors.LoginInterceptor - 当前访问接口:/main.html
+2022-06-27 11:49:37.018 [http-nio-8888-exec-9] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==>  Preparing: SELECT user_id,username,password,old_password,nick_name,phone,email,disable,login_status,create_user_id,create_time,update_time,delete_time,login_time,remark,dept_id FROM SYS_USER_INFO WHERE user_id=? 
+2022-06-27 11:49:37.019 [http-nio-8888-exec-9] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==> Parameters: 1115864462813077506(String)
+2022-06-27 11:49:37.021 [http-nio-8888-exec-9] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - <==      Total: 1
+2022-06-27 11:49:44.770 [http-nio-8888-exec-10] DEBUG cn.wolfcode.web.commons.interceptors.LoginInterceptor - 当前访问接口:/visit/list.html
+2022-06-27 11:49:44.774 [http-nio-8888-exec-10] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==>  Preparing: SELECT user_id,username,password,old_password,nick_name,phone,email,disable,login_status,create_user_id,create_time,update_time,delete_time,login_time,remark,dept_id FROM SYS_USER_INFO WHERE user_id=? 
+2022-06-27 11:49:44.774 [http-nio-8888-exec-10] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==> Parameters: 1115864462813077506(String)
+2022-06-27 11:49:44.776 [http-nio-8888-exec-10] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - <==      Total: 1
+2022-06-27 11:49:44.885 [http-nio-8888-exec-10] DEBUG cn.wolfcode.web.modules.linkman.mapper.TbCustLinkmanMapper.selectList - ==>  Preparing: SELECT id,cust_id,linkman,sex,age,phone,position,department,remark,input_user,input_time FROM tb_cust_linkman 
+2022-06-27 11:49:44.886 [http-nio-8888-exec-10] DEBUG cn.wolfcode.web.modules.linkman.mapper.TbCustLinkmanMapper.selectList - ==> Parameters: 
+2022-06-27 11:49:44.890 [http-nio-8888-exec-10] DEBUG cn.wolfcode.web.modules.linkman.mapper.TbCustLinkmanMapper.selectList - <==      Total: 8
+2022-06-27 11:49:44.896 [http-nio-8888-exec-10] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectList - ==>  Preparing: SELECT id,customer_name,legal_leader,register_date,open_status,province,reg_capital,industry,scope,reg_addr,input_time,update_time,input_user_id FROM tb_customer 
+2022-06-27 11:49:44.897 [http-nio-8888-exec-10] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectList - ==> Parameters: 
+2022-06-27 11:49:44.901 [http-nio-8888-exec-10] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectList - <==      Total: 10
+2022-06-27 11:49:46.528 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.commons.interceptors.LoginInterceptor - 当前访问接口:/visit/list
+2022-06-27 11:49:46.530 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==>  Preparing: SELECT user_id,username,password,old_password,nick_name,phone,email,disable,login_status,create_user_id,create_time,update_time,delete_time,login_time,remark,dept_id FROM SYS_USER_INFO WHERE user_id=? 
+2022-06-27 11:49:46.530 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==> Parameters: 1115864462813077506(String)
+2022-06-27 11:49:46.534 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - <==      Total: 1
+2022-06-27 11:49:46.685 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.linkmanvisit.mapper.TbVisitMapper.selectPage - ==>  Preparing: SELECT COUNT(1) FROM tb_visit 
+2022-06-27 11:49:46.688 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.linkmanvisit.mapper.TbVisitMapper.selectPage - ==> Parameters: 
+2022-06-27 11:49:46.701 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.linkmanvisit.mapper.TbVisitMapper.selectPage - ==>  Preparing: SELECT id,cust_id,linkman_id,visit_type,visit_reason,content,visit_date,input_user,input_time FROM tb_visit LIMIT ?,? 
+2022-06-27 11:49:46.702 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.linkmanvisit.mapper.TbVisitMapper.selectPage - ==> Parameters: 0(Long), 10(Long)
+2022-06-27 11:49:46.705 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.linkmanvisit.mapper.TbVisitMapper.selectPage - <==      Total: 10
+2022-06-27 11:49:46.707 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectById - ==>  Preparing: SELECT id,customer_name,legal_leader,register_date,open_status,province,reg_capital,industry,scope,reg_addr,input_time,update_time,input_user_id FROM tb_customer WHERE id=? 
+2022-06-27 11:49:46.709 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectById - ==> Parameters: 1(String)
+2022-06-27 11:49:46.710 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectById - <==      Total: 1
+2022-06-27 11:49:46.713 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.linkman.mapper.TbCustLinkmanMapper.selectById - ==>  Preparing: SELECT id,cust_id,linkman,sex,age,phone,position,department,remark,input_user,input_time FROM tb_cust_linkman WHERE id=? 
+2022-06-27 11:49:46.715 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.linkman.mapper.TbCustLinkmanMapper.selectById - ==> Parameters: 06a7910232e846fe80f5a9bc1f1f3011(String)
+2022-06-27 11:49:46.718 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.linkman.mapper.TbCustLinkmanMapper.selectById - <==      Total: 1
+2022-06-27 11:49:46.719 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectById - ==>  Preparing: SELECT id,customer_name,legal_leader,register_date,open_status,province,reg_capital,industry,scope,reg_addr,input_time,update_time,input_user_id FROM tb_customer WHERE id=? 
+2022-06-27 11:49:46.720 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectById - ==> Parameters: 2(String)
+2022-06-27 11:49:46.722 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectById - <==      Total: 1
+2022-06-27 11:49:46.723 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.linkman.mapper.TbCustLinkmanMapper.selectById - ==>  Preparing: SELECT id,cust_id,linkman,sex,age,phone,position,department,remark,input_user,input_time FROM tb_cust_linkman WHERE id=? 
+2022-06-27 11:49:46.724 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.linkman.mapper.TbCustLinkmanMapper.selectById - ==> Parameters: 4908e3942d9b50f7e64f448c2c23f2a9(String)
+2022-06-27 11:49:46.725 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.linkman.mapper.TbCustLinkmanMapper.selectById - <==      Total: 1
+2022-06-27 11:49:46.727 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectById - ==>  Preparing: SELECT id,customer_name,legal_leader,register_date,open_status,province,reg_capital,industry,scope,reg_addr,input_time,update_time,input_user_id FROM tb_customer WHERE id=? 
+2022-06-27 11:49:46.728 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectById - ==> Parameters: 94ec1b050c95d2b43b927adce80d87f4(String)
+2022-06-27 11:49:46.730 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectById - <==      Total: 1
+2022-06-27 11:49:46.733 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.linkman.mapper.TbCustLinkmanMapper.selectById - ==>  Preparing: SELECT id,cust_id,linkman,sex,age,phone,position,department,remark,input_user,input_time FROM tb_cust_linkman WHERE id=? 
+2022-06-27 11:49:46.734 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.linkman.mapper.TbCustLinkmanMapper.selectById - ==> Parameters: 06a7910232e846fe80f5a9bc1f1f3011(String)
+2022-06-27 11:49:46.736 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.linkman.mapper.TbCustLinkmanMapper.selectById - <==      Total: 1
+2022-06-27 11:49:46.738 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectById - ==>  Preparing: SELECT id,customer_name,legal_leader,register_date,open_status,province,reg_capital,industry,scope,reg_addr,input_time,update_time,input_user_id FROM tb_customer WHERE id=? 
+2022-06-27 11:49:46.739 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectById - ==> Parameters: 7(String)
+2022-06-27 11:49:46.741 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectById - <==      Total: 1
+2022-06-27 11:49:46.742 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.linkman.mapper.TbCustLinkmanMapper.selectById - ==>  Preparing: SELECT id,cust_id,linkman,sex,age,phone,position,department,remark,input_user,input_time FROM tb_cust_linkman WHERE id=? 
+2022-06-27 11:49:46.743 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.linkman.mapper.TbCustLinkmanMapper.selectById - ==> Parameters: 56b950268a2e4179e12cf7cb9b6c675f(String)
+2022-06-27 11:49:46.744 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.linkman.mapper.TbCustLinkmanMapper.selectById - <==      Total: 1
+2022-06-27 11:49:46.746 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectById - ==>  Preparing: SELECT id,customer_name,legal_leader,register_date,open_status,province,reg_capital,industry,scope,reg_addr,input_time,update_time,input_user_id FROM tb_customer WHERE id=? 
+2022-06-27 11:49:46.747 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectById - ==> Parameters: 2(String)
+2022-06-27 11:49:46.748 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectById - <==      Total: 1
+2022-06-27 11:49:46.751 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.linkman.mapper.TbCustLinkmanMapper.selectById - ==>  Preparing: SELECT id,cust_id,linkman,sex,age,phone,position,department,remark,input_user,input_time FROM tb_cust_linkman WHERE id=? 
+2022-06-27 11:49:46.751 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.linkman.mapper.TbCustLinkmanMapper.selectById - ==> Parameters: 1(String)
+2022-06-27 11:49:46.753 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.linkman.mapper.TbCustLinkmanMapper.selectById - <==      Total: 1
+2022-06-27 11:49:46.755 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectById - ==>  Preparing: SELECT id,customer_name,legal_leader,register_date,open_status,province,reg_capital,industry,scope,reg_addr,input_time,update_time,input_user_id FROM tb_customer WHERE id=? 
+2022-06-27 11:49:46.756 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectById - ==> Parameters: 94ec1b050c95d2b43b927adce80d87f4(String)
+2022-06-27 11:49:46.762 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectById - <==      Total: 1
+2022-06-27 11:49:46.763 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.linkman.mapper.TbCustLinkmanMapper.selectById - ==>  Preparing: SELECT id,cust_id,linkman,sex,age,phone,position,department,remark,input_user,input_time FROM tb_cust_linkman WHERE id=? 
+2022-06-27 11:49:46.764 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.linkman.mapper.TbCustLinkmanMapper.selectById - ==> Parameters: 2(String)
+2022-06-27 11:49:46.766 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.linkman.mapper.TbCustLinkmanMapper.selectById - <==      Total: 1
+2022-06-27 11:49:46.768 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectById - ==>  Preparing: SELECT id,customer_name,legal_leader,register_date,open_status,province,reg_capital,industry,scope,reg_addr,input_time,update_time,input_user_id FROM tb_customer WHERE id=? 
+2022-06-27 11:49:46.769 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectById - ==> Parameters: b75b4e42b375675e7574e00e2231eeb0(String)
+2022-06-27 11:49:46.770 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectById - <==      Total: 1
+2022-06-27 11:49:46.772 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.linkman.mapper.TbCustLinkmanMapper.selectById - ==>  Preparing: SELECT id,cust_id,linkman,sex,age,phone,position,department,remark,input_user,input_time FROM tb_cust_linkman WHERE id=? 
+2022-06-27 11:49:46.772 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.linkman.mapper.TbCustLinkmanMapper.selectById - ==> Parameters: 21e0c3ba765e32563ade01f34693883d(String)
+2022-06-27 11:49:46.773 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.linkman.mapper.TbCustLinkmanMapper.selectById - <==      Total: 1
+2022-06-27 11:49:46.775 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectById - ==>  Preparing: SELECT id,customer_name,legal_leader,register_date,open_status,province,reg_capital,industry,scope,reg_addr,input_time,update_time,input_user_id FROM tb_customer WHERE id=? 
+2022-06-27 11:49:46.776 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectById - ==> Parameters: 2(String)
+2022-06-27 11:49:46.777 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectById - <==      Total: 1
+2022-06-27 11:49:46.779 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.linkman.mapper.TbCustLinkmanMapper.selectById - ==>  Preparing: SELECT id,cust_id,linkman,sex,age,phone,position,department,remark,input_user,input_time FROM tb_cust_linkman WHERE id=? 
+2022-06-27 11:49:46.779 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.linkman.mapper.TbCustLinkmanMapper.selectById - ==> Parameters: 4908e3942d9b50f7e64f448c2c23f2a9(String)
+2022-06-27 11:49:46.783 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.linkman.mapper.TbCustLinkmanMapper.selectById - <==      Total: 1
+2022-06-27 11:49:46.784 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectById - ==>  Preparing: SELECT id,customer_name,legal_leader,register_date,open_status,province,reg_capital,industry,scope,reg_addr,input_time,update_time,input_user_id FROM tb_customer WHERE id=? 
+2022-06-27 11:49:46.785 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectById - ==> Parameters: b75b4e42b375675e7574e00e2231eeb0(String)
+2022-06-27 11:49:46.787 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectById - <==      Total: 1
+2022-06-27 11:49:46.788 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.linkman.mapper.TbCustLinkmanMapper.selectById - ==>  Preparing: SELECT id,cust_id,linkman,sex,age,phone,position,department,remark,input_user,input_time FROM tb_cust_linkman WHERE id=? 
+2022-06-27 11:49:46.789 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.linkman.mapper.TbCustLinkmanMapper.selectById - ==> Parameters: 4908e3942d9b50f7e64f448c2c23f2a9(String)
+2022-06-27 11:49:46.791 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.linkman.mapper.TbCustLinkmanMapper.selectById - <==      Total: 1
+2022-06-27 11:49:46.792 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectById - ==>  Preparing: SELECT id,customer_name,legal_leader,register_date,open_status,province,reg_capital,industry,scope,reg_addr,input_time,update_time,input_user_id FROM tb_customer WHERE id=? 
+2022-06-27 11:49:46.793 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectById - ==> Parameters: 2(String)
+2022-06-27 11:49:46.795 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectById - <==      Total: 1
+2022-06-27 11:49:46.796 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.linkman.mapper.TbCustLinkmanMapper.selectById - ==>  Preparing: SELECT id,cust_id,linkman,sex,age,phone,position,department,remark,input_user,input_time FROM tb_cust_linkman WHERE id=? 
+2022-06-27 11:49:46.797 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.linkman.mapper.TbCustLinkmanMapper.selectById - ==> Parameters: c4758e75d1b5a0cab5da2583a8be45c4(String)
+2022-06-27 11:49:46.801 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.linkman.mapper.TbCustLinkmanMapper.selectById - <==      Total: 1
+2022-06-27 11:49:50.105 [http-nio-8888-exec-5] DEBUG cn.wolfcode.web.commons.interceptors.LoginInterceptor - 当前访问接口:/visit/add.html
+2022-06-27 11:49:50.112 [http-nio-8888-exec-5] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==>  Preparing: SELECT user_id,username,password,old_password,nick_name,phone,email,disable,login_status,create_user_id,create_time,update_time,delete_time,login_time,remark,dept_id FROM SYS_USER_INFO WHERE user_id=? 
+2022-06-27 11:49:50.113 [http-nio-8888-exec-5] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==> Parameters: 1115864462813077506(String)
+2022-06-27 11:49:50.114 [http-nio-8888-exec-5] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - <==      Total: 1
+2022-06-27 11:49:50.227 [http-nio-8888-exec-5] DEBUG cn.wolfcode.web.modules.linkman.mapper.TbCustLinkmanMapper.selectList - ==>  Preparing: SELECT id,cust_id,linkman,sex,age,phone,position,department,remark,input_user,input_time FROM tb_cust_linkman 
+2022-06-27 11:49:50.228 [http-nio-8888-exec-5] DEBUG cn.wolfcode.web.modules.linkman.mapper.TbCustLinkmanMapper.selectList - ==> Parameters: 
+2022-06-27 11:49:50.231 [http-nio-8888-exec-5] DEBUG cn.wolfcode.web.modules.linkman.mapper.TbCustLinkmanMapper.selectList - <==      Total: 8
+2022-06-27 11:49:50.234 [http-nio-8888-exec-5] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectList - ==>  Preparing: SELECT id,customer_name,legal_leader,register_date,open_status,province,reg_capital,industry,scope,reg_addr,input_time,update_time,input_user_id FROM tb_customer 
+2022-06-27 11:49:50.234 [http-nio-8888-exec-5] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectList - ==> Parameters: 
+2022-06-27 11:49:50.237 [http-nio-8888-exec-5] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectList - <==      Total: 10
+2022-06-27 11:50:20.920 [MessageBroker-2] INFO  org.springframework.web.socket.config.WebSocketMessageBrokerStats - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 3, active threads = 1, queued tasks = 1, completed tasks = 1]
+2022-06-27 11:51:18.565 [http-nio-8888-exec-1] DEBUG cn.wolfcode.web.commons.interceptors.LoginInterceptor - 当前访问接口:/contractinfo/list.html
+2022-06-27 11:51:18.565 [http-nio-8888-exec-1] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==>  Preparing: SELECT user_id,username,password,old_password,nick_name,phone,email,disable,login_status,create_user_id,create_time,update_time,delete_time,login_time,remark,dept_id FROM SYS_USER_INFO WHERE user_id=? 
+2022-06-27 11:51:18.565 [http-nio-8888-exec-1] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==> Parameters: 1115864462813077506(String)
+2022-06-27 11:51:18.580 [http-nio-8888-exec-1] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - <==      Total: 1
+2022-06-27 11:51:19.924 [http-nio-8888-exec-2] DEBUG cn.wolfcode.web.commons.interceptors.LoginInterceptor - 当前访问接口:/contractinfo/list
+2022-06-27 11:51:19.924 [http-nio-8888-exec-2] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==>  Preparing: SELECT user_id,username,password,old_password,nick_name,phone,email,disable,login_status,create_user_id,create_time,update_time,delete_time,login_time,remark,dept_id FROM SYS_USER_INFO WHERE user_id=? 
+2022-06-27 11:51:19.924 [http-nio-8888-exec-2] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==> Parameters: 1115864462813077506(String)
+2022-06-27 11:51:19.924 [http-nio-8888-exec-2] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - <==      Total: 1
+2022-06-27 11:51:20.033 [http-nio-8888-exec-2] DEBUG cn.wolfcode.web.modules.contractinfo.mapper.TbContractMapper.selectPage - ==>  Preparing: SELECT COUNT(1) FROM tb_contract 
+2022-06-27 11:51:20.033 [http-nio-8888-exec-2] DEBUG cn.wolfcode.web.modules.contractinfo.mapper.TbContractMapper.selectPage - ==> Parameters: 
+2022-06-27 11:51:20.033 [http-nio-8888-exec-2] DEBUG cn.wolfcode.web.modules.contractinfo.mapper.TbContractMapper.selectPage - ==>  Preparing: SELECT id,cust_id,contract_name,contract_code,amounts,start_date,end_date,content,affix_seal_status,audit_status,nullify_status,input_user,input_time,update_time FROM tb_contract LIMIT ?,? 
+2022-06-27 11:51:20.033 [http-nio-8888-exec-2] DEBUG cn.wolfcode.web.modules.contractinfo.mapper.TbContractMapper.selectPage - ==> Parameters: 0(Long), 10(Long)
+2022-06-27 11:51:20.033 [http-nio-8888-exec-2] DEBUG cn.wolfcode.web.modules.contractinfo.mapper.TbContractMapper.selectPage - <==      Total: 3
+2022-06-27 11:51:20.049 [http-nio-8888-exec-2] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectById - ==>  Preparing: SELECT id,customer_name,legal_leader,register_date,open_status,province,reg_capital,industry,scope,reg_addr,input_time,update_time,input_user_id FROM tb_customer WHERE id=? 
+2022-06-27 11:51:20.049 [http-nio-8888-exec-2] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectById - ==> Parameters: 94ec1b050c95d2b43b927adce80d87f4(String)
+2022-06-27 11:51:20.049 [http-nio-8888-exec-2] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectById - <==      Total: 1
+2022-06-27 11:51:20.049 [http-nio-8888-exec-2] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectById - ==>  Preparing: SELECT id,customer_name,legal_leader,register_date,open_status,province,reg_capital,industry,scope,reg_addr,input_time,update_time,input_user_id FROM tb_customer WHERE id=? 
+2022-06-27 11:51:20.049 [http-nio-8888-exec-2] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectById - ==> Parameters: 94ec1b050c95d2b43b927adce80d87f4(String)
+2022-06-27 11:51:20.049 [http-nio-8888-exec-2] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectById - <==      Total: 1
+2022-06-27 11:51:20.049 [http-nio-8888-exec-2] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectById - ==>  Preparing: SELECT id,customer_name,legal_leader,register_date,open_status,province,reg_capital,industry,scope,reg_addr,input_time,update_time,input_user_id FROM tb_customer WHERE id=? 
+2022-06-27 11:51:20.049 [http-nio-8888-exec-2] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectById - ==> Parameters: b75b4e42b375675e7574e00e2231eeb0(String)
+2022-06-27 11:51:20.049 [http-nio-8888-exec-2] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectById - <==      Total: 1
+2022-06-27 11:51:21.732 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.commons.interceptors.LoginInterceptor - 当前访问接口:/contractinfo/032ec7654cf666757012cd4bb6d32da0.html
+2022-06-27 11:51:21.733 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==>  Preparing: SELECT user_id,username,password,old_password,nick_name,phone,email,disable,login_status,create_user_id,create_time,update_time,delete_time,login_time,remark,dept_id FROM SYS_USER_INFO WHERE user_id=? 
+2022-06-27 11:51:21.735 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==> Parameters: 1115864462813077506(String)
+2022-06-27 11:51:21.736 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - <==      Total: 1
+2022-06-27 11:51:21.848 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectList - ==>  Preparing: SELECT id,customer_name,legal_leader,register_date,open_status,province,reg_capital,industry,scope,reg_addr,input_time,update_time,input_user_id FROM tb_customer 
+2022-06-27 11:51:21.848 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectList - ==> Parameters: 
+2022-06-27 11:51:21.852 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectList - <==      Total: 10
+2022-06-27 11:51:21.854 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.contractinfo.mapper.TbContractMapper.selectById - ==>  Preparing: SELECT id,cust_id,contract_name,contract_code,amounts,start_date,end_date,content,affix_seal_status,audit_status,nullify_status,input_user,input_time,update_time FROM tb_contract WHERE id=? 
+2022-06-27 11:51:21.855 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.contractinfo.mapper.TbContractMapper.selectById - ==> Parameters: 032ec7654cf666757012cd4bb6d32da0(String)
+2022-06-27 11:51:21.856 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.contractinfo.mapper.TbContractMapper.selectById - <==      Total: 1
+2022-06-27 11:51:26.616 [http-nio-8888-exec-6] DEBUG cn.wolfcode.web.commons.interceptors.LoginInterceptor - 当前访问接口:/orderinfo/list.html
+2022-06-27 11:51:26.620 [http-nio-8888-exec-6] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==>  Preparing: SELECT user_id,username,password,old_password,nick_name,phone,email,disable,login_status,create_user_id,create_time,update_time,delete_time,login_time,remark,dept_id FROM SYS_USER_INFO WHERE user_id=? 
+2022-06-27 11:51:26.621 [http-nio-8888-exec-6] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==> Parameters: 1115864462813077506(String)
+2022-06-27 11:51:26.622 [http-nio-8888-exec-6] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - <==      Total: 1
+2022-06-27 11:51:26.743 [http-nio-8888-exec-6] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectList - ==>  Preparing: SELECT id,customer_name,legal_leader,register_date,open_status,province,reg_capital,industry,scope,reg_addr,input_time,update_time,input_user_id FROM tb_customer 
+2022-06-27 11:51:26.743 [http-nio-8888-exec-6] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectList - ==> Parameters: 
+2022-06-27 11:51:26.745 [http-nio-8888-exec-6] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectList - <==      Total: 10
+2022-06-27 11:51:27.880 [http-nio-8888-exec-7] DEBUG cn.wolfcode.web.commons.interceptors.LoginInterceptor - 当前访问接口:/orderinfo/list
+2022-06-27 11:51:27.883 [http-nio-8888-exec-7] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==>  Preparing: SELECT user_id,username,password,old_password,nick_name,phone,email,disable,login_status,create_user_id,create_time,update_time,delete_time,login_time,remark,dept_id FROM SYS_USER_INFO WHERE user_id=? 
+2022-06-27 11:51:27.884 [http-nio-8888-exec-7] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==> Parameters: 1115864462813077506(String)
+2022-06-27 11:51:27.887 [http-nio-8888-exec-7] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - <==      Total: 1
+2022-06-27 11:51:27.978 [http-nio-8888-exec-7] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.selectPage - ==>  Preparing: SELECT COUNT(1) FROM tb_order_info 
+2022-06-27 11:51:27.979 [http-nio-8888-exec-7] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.selectPage - ==> Parameters: 
+2022-06-27 11:51:27.983 [http-nio-8888-exec-7] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.selectPage - ==>  Preparing: SELECT id,cust_id,prod_name,amounts,price,status,receiver,link_phone,address,logistcs,logistics_code,deliver_time,receive_time,input_time,input_user_id FROM tb_order_info LIMIT ?,? 
+2022-06-27 11:51:27.984 [http-nio-8888-exec-7] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.selectPage - ==> Parameters: 0(Long), 10(Long)
+2022-06-27 11:51:27.985 [http-nio-8888-exec-7] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.selectPage - <==      Total: 3
+2022-06-27 11:51:30.726 [http-nio-8888-exec-8] DEBUG cn.wolfcode.web.commons.interceptors.LoginInterceptor - 当前访问接口:/orderinfo/d8696562409f908ecafa27e99bbdcab4.html
+2022-06-27 11:51:30.728 [http-nio-8888-exec-8] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==>  Preparing: SELECT user_id,username,password,old_password,nick_name,phone,email,disable,login_status,create_user_id,create_time,update_time,delete_time,login_time,remark,dept_id FROM SYS_USER_INFO WHERE user_id=? 
+2022-06-27 11:51:30.729 [http-nio-8888-exec-8] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==> Parameters: 1115864462813077506(String)
+2022-06-27 11:51:30.730 [http-nio-8888-exec-8] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - <==      Total: 1
+2022-06-27 11:51:30.830 [http-nio-8888-exec-8] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectList - ==>  Preparing: SELECT id,customer_name,legal_leader,register_date,open_status,province,reg_capital,industry,scope,reg_addr,input_time,update_time,input_user_id FROM tb_customer 
+2022-06-27 11:51:30.830 [http-nio-8888-exec-8] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectList - ==> Parameters: 
+2022-06-27 11:51:30.833 [http-nio-8888-exec-8] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectList - <==      Total: 10
+2022-06-27 11:51:30.835 [http-nio-8888-exec-8] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.selectById - ==>  Preparing: SELECT id,cust_id,prod_name,amounts,price,status,receiver,link_phone,address,logistcs,logistics_code,deliver_time,receive_time,input_time,input_user_id FROM tb_order_info WHERE id=? 
+2022-06-27 11:51:30.836 [http-nio-8888-exec-8] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.selectById - ==> Parameters: d8696562409f908ecafa27e99bbdcab4(String)
+2022-06-27 11:51:30.838 [http-nio-8888-exec-8] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.selectById - <==      Total: 1
+2022-06-27 11:51:47.085 [http-nio-8888-exec-1] DEBUG cn.wolfcode.web.commons.interceptors.LoginInterceptor - 当前访问接口:/orderinfo/d8696562409f908ecafa27e99bbdcab4.html
+2022-06-27 11:51:47.089 [http-nio-8888-exec-1] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==>  Preparing: SELECT user_id,username,password,old_password,nick_name,phone,email,disable,login_status,create_user_id,create_time,update_time,delete_time,login_time,remark,dept_id FROM SYS_USER_INFO WHERE user_id=? 
+2022-06-27 11:51:47.089 [http-nio-8888-exec-1] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==> Parameters: 1115864462813077506(String)
+2022-06-27 11:51:47.091 [http-nio-8888-exec-1] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - <==      Total: 1
+2022-06-27 11:51:47.187 [http-nio-8888-exec-1] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectList - ==>  Preparing: SELECT id,customer_name,legal_leader,register_date,open_status,province,reg_capital,industry,scope,reg_addr,input_time,update_time,input_user_id FROM tb_customer 
+2022-06-27 11:51:47.188 [http-nio-8888-exec-1] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectList - ==> Parameters: 
+2022-06-27 11:51:47.189 [http-nio-8888-exec-1] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectList - <==      Total: 10
+2022-06-27 11:51:47.191 [http-nio-8888-exec-1] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.selectById - ==>  Preparing: SELECT id,cust_id,prod_name,amounts,price,status,receiver,link_phone,address,logistcs,logistics_code,deliver_time,receive_time,input_time,input_user_id FROM tb_order_info WHERE id=? 
+2022-06-27 11:51:47.192 [http-nio-8888-exec-1] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.selectById - ==> Parameters: d8696562409f908ecafa27e99bbdcab4(String)
+2022-06-27 11:51:47.193 [http-nio-8888-exec-1] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.selectById - <==      Total: 1
+2022-06-27 11:54:49.005 [http-nio-8888-exec-5] DEBUG cn.wolfcode.web.commons.interceptors.LoginInterceptor - 当前访问接口:/orderinfo/list.html
+2022-06-27 11:54:49.007 [http-nio-8888-exec-5] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==>  Preparing: SELECT user_id,username,password,old_password,nick_name,phone,email,disable,login_status,create_user_id,create_time,update_time,delete_time,login_time,remark,dept_id FROM SYS_USER_INFO WHERE user_id=? 
+2022-06-27 11:54:49.007 [http-nio-8888-exec-5] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==> Parameters: 1115864462813077506(String)
+2022-06-27 11:54:49.009 [http-nio-8888-exec-5] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - <==      Total: 1
+2022-06-27 11:54:49.064 [http-nio-8888-exec-5] DEBUG cn.wolfcode.web.modules.sys.mapper.SysMenuMapper.selectList - ==>  Preparing: SELECT menu_id,menu_name,parent_menu_code,menu_icon,menu_type,sort,menu_code,menu_url,authorization,disable FROM SYS_MENU_INFO ORDER BY SORT DESC 
+2022-06-27 11:54:49.065 [http-nio-8888-exec-5] DEBUG cn.wolfcode.web.modules.sys.mapper.SysMenuMapper.selectList - ==> Parameters: 
+2022-06-27 11:54:49.072 [http-nio-8888-exec-5] DEBUG cn.wolfcode.web.modules.sys.mapper.SysMenuMapper.selectList - <==      Total: 103
+2022-06-27 11:54:49.150 [http-nio-8888-exec-5] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectList - ==>  Preparing: SELECT id,customer_name,legal_leader,register_date,open_status,province,reg_capital,industry,scope,reg_addr,input_time,update_time,input_user_id FROM tb_customer 
+2022-06-27 11:54:49.151 [http-nio-8888-exec-5] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectList - ==> Parameters: 
+2022-06-27 11:54:49.154 [http-nio-8888-exec-5] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectList - <==      Total: 10
+2022-06-27 11:54:50.269 [http-nio-8888-exec-9] DEBUG cn.wolfcode.web.commons.interceptors.LoginInterceptor - 当前访问接口:/orderinfo/list
+2022-06-27 11:54:50.270 [http-nio-8888-exec-9] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==>  Preparing: SELECT user_id,username,password,old_password,nick_name,phone,email,disable,login_status,create_user_id,create_time,update_time,delete_time,login_time,remark,dept_id FROM SYS_USER_INFO WHERE user_id=? 
+2022-06-27 11:54:50.270 [http-nio-8888-exec-9] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==> Parameters: 1115864462813077506(String)
+2022-06-27 11:54:50.272 [http-nio-8888-exec-9] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - <==      Total: 1
+2022-06-27 11:54:50.419 [http-nio-8888-exec-9] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.selectPage - ==>  Preparing: SELECT COUNT(1) FROM tb_order_info 
+2022-06-27 11:54:50.419 [http-nio-8888-exec-9] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.selectPage - ==> Parameters: 
+2022-06-27 11:54:50.419 [http-nio-8888-exec-9] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.selectPage - ==>  Preparing: SELECT id,cust_id,prod_name,amounts,price,status,receiver,link_phone,address,logistcs,logistics_code,deliver_time,receive_time,input_time,input_user_id FROM tb_order_info LIMIT ?,? 
+2022-06-27 11:54:50.419 [http-nio-8888-exec-9] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.selectPage - ==> Parameters: 0(Long), 10(Long)
+2022-06-27 11:54:50.419 [http-nio-8888-exec-9] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.selectPage - <==      Total: 3
+2022-06-27 11:55:02.235 [http-nio-8888-exec-7] DEBUG cn.wolfcode.web.commons.interceptors.LoginInterceptor - 当前访问接口:/orderinfo/add.html
+2022-06-27 11:55:02.235 [http-nio-8888-exec-7] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==>  Preparing: SELECT user_id,username,password,old_password,nick_name,phone,email,disable,login_status,create_user_id,create_time,update_time,delete_time,login_time,remark,dept_id FROM SYS_USER_INFO WHERE user_id=? 
+2022-06-27 11:55:02.235 [http-nio-8888-exec-7] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==> Parameters: 1115864462813077506(String)
+2022-06-27 11:55:02.235 [http-nio-8888-exec-7] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - <==      Total: 1
+2022-06-27 11:55:02.375 [http-nio-8888-exec-7] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectList - ==>  Preparing: SELECT id,customer_name,legal_leader,register_date,open_status,province,reg_capital,industry,scope,reg_addr,input_time,update_time,input_user_id FROM tb_customer 
+2022-06-27 11:55:02.375 [http-nio-8888-exec-7] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectList - ==> Parameters: 
+2022-06-27 11:55:02.375 [http-nio-8888-exec-7] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectList - <==      Total: 10
+2022-06-27 11:55:06.392 [http-nio-8888-exec-10] DEBUG cn.wolfcode.web.commons.interceptors.LoginInterceptor - 当前访问接口:/linkman/listByCustomerId
+2022-06-27 11:55:06.394 [http-nio-8888-exec-10] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==>  Preparing: SELECT user_id,username,password,old_password,nick_name,phone,email,disable,login_status,create_user_id,create_time,update_time,delete_time,login_time,remark,dept_id FROM SYS_USER_INFO WHERE user_id=? 
+2022-06-27 11:55:06.395 [http-nio-8888-exec-10] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==> Parameters: 1115864462813077506(String)
+2022-06-27 11:55:06.396 [http-nio-8888-exec-10] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - <==      Total: 1
+2022-06-27 11:55:06.511 [http-nio-8888-exec-10] DEBUG cn.wolfcode.web.modules.linkman.controller.TbCustLinkmanController - 企业id参数接收：1
+2022-06-27 11:55:06.517 [http-nio-8888-exec-10] DEBUG cn.wolfcode.web.modules.linkman.mapper.TbCustLinkmanMapper.selectList - ==>  Preparing: SELECT id,cust_id,linkman,sex,age,phone,position,department,remark,input_user,input_time FROM tb_cust_linkman WHERE (cust_id = ?) 
+2022-06-27 11:55:06.519 [http-nio-8888-exec-10] DEBUG cn.wolfcode.web.modules.linkman.mapper.TbCustLinkmanMapper.selectList - ==> Parameters: 1(String)
+2022-06-27 11:55:06.521 [http-nio-8888-exec-10] DEBUG cn.wolfcode.web.modules.linkman.mapper.TbCustLinkmanMapper.selectList - <==      Total: 1
+2022-06-27 11:55:13.617 [http-nio-8888-exec-1] DEBUG cn.wolfcode.web.commons.interceptors.LoginInterceptor - 当前访问接口:/orderinfo/save
+2022-06-27 11:55:13.623 [http-nio-8888-exec-1] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==>  Preparing: SELECT user_id,username,password,old_password,nick_name,phone,email,disable,login_status,create_user_id,create_time,update_time,delete_time,login_time,remark,dept_id FROM SYS_USER_INFO WHERE user_id=? 
+2022-06-27 11:55:13.624 [http-nio-8888-exec-1] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==> Parameters: 1115864462813077506(String)
+2022-06-27 11:55:13.625 [http-nio-8888-exec-1] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - <==      Total: 1
+2022-06-27 11:55:13.781 [http-nio-8888-exec-1] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.insert - ==>  Preparing: INSERT INTO tb_order_info ( id, cust_id, prod_name, status, receiver, link_phone, address, logistcs, logistics_code, input_time, input_user_id ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
+2022-06-27 11:55:13.781 [http-nio-8888-exec-1] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.insert - ==> Parameters: 6cf20ccb00aa62532da7603230abb857(String), 1(String), (String), 2(Integer), (String), (String), (String), (String), (String), 2022-06-27T11:55:13.781571600(LocalDateTime), 1115864462813077506(String)
+2022-06-27 11:55:13.797 [http-nio-8888-exec-1] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.insert - <==    Updates: 1
+2022-06-27 11:55:13.797 [http-nio-8888-exec-1] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserOperationLogMapper.insert - ==>  Preparing: INSERT INTO SYS_USER_OPERATION_LOG ( ID, USER_NAME, OPERATION_MODULE, OPERATION_TYPE, VISIT_METHOD, PARAMETERS, IP_ADDRESS, DURATION, OPERATION_TIME ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
+2022-06-27 11:55:13.797 [http-nio-8888-exec-1] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserOperationLogMapper.insert - ==> Parameters: 8a851c800f484f608734bf1cd0767982(String), admin(String), TbOrderInfo(String), 新增(String), save(String), {}(String), 127.0.0.1(String), 16(Long), 2022-06-27T11:55:13.797373(LocalDateTime)
+2022-06-27 11:55:13.812 [http-nio-8888-exec-1] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserOperationLogMapper.insert - <==    Updates: 1
+2022-06-27 11:55:14.476 [http-nio-8888-exec-3] DEBUG cn.wolfcode.web.commons.interceptors.LoginInterceptor - 当前访问接口:/orderinfo/list
+2022-06-27 11:55:14.478 [http-nio-8888-exec-3] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==>  Preparing: SELECT user_id,username,password,old_password,nick_name,phone,email,disable,login_status,create_user_id,create_time,update_time,delete_time,login_time,remark,dept_id FROM SYS_USER_INFO WHERE user_id=? 
+2022-06-27 11:55:14.479 [http-nio-8888-exec-3] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==> Parameters: 1115864462813077506(String)
+2022-06-27 11:55:14.480 [http-nio-8888-exec-3] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - <==      Total: 1
+2022-06-27 11:55:14.601 [http-nio-8888-exec-3] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.selectPage - ==>  Preparing: SELECT COUNT(1) FROM tb_order_info 
+2022-06-27 11:55:14.601 [http-nio-8888-exec-3] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.selectPage - ==> Parameters: 
+2022-06-27 11:55:14.601 [http-nio-8888-exec-3] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.selectPage - ==>  Preparing: SELECT id,cust_id,prod_name,amounts,price,status,receiver,link_phone,address,logistcs,logistics_code,deliver_time,receive_time,input_time,input_user_id FROM tb_order_info LIMIT ?,? 
+2022-06-27 11:55:14.601 [http-nio-8888-exec-3] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.selectPage - ==> Parameters: 0(Long), 10(Long)
+2022-06-27 11:55:14.601 [http-nio-8888-exec-3] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.selectPage - <==      Total: 4
+2022-06-27 11:55:17.766 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.commons.interceptors.LoginInterceptor - 当前访问接口:/orderinfo/delete/6cf20ccb00aa62532da7603230abb857
+2022-06-27 11:55:17.766 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==>  Preparing: SELECT user_id,username,password,old_password,nick_name,phone,email,disable,login_status,create_user_id,create_time,update_time,delete_time,login_time,remark,dept_id FROM SYS_USER_INFO WHERE user_id=? 
+2022-06-27 11:55:17.766 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==> Parameters: 1115864462813077506(String)
+2022-06-27 11:55:17.766 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - <==      Total: 1
+2022-06-27 11:55:17.923 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.deleteById - ==>  Preparing: DELETE FROM tb_order_info WHERE id=? 
+2022-06-27 11:55:17.923 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.deleteById - ==> Parameters: 6cf20ccb00aa62532da7603230abb857(String)
+2022-06-27 11:55:17.939 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.deleteById - <==    Updates: 1
+2022-06-27 11:55:17.939 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserOperationLogMapper.insert - ==>  Preparing: INSERT INTO SYS_USER_OPERATION_LOG ( ID, USER_NAME, OPERATION_MODULE, OPERATION_TYPE, VISIT_METHOD, PARAMETERS, IP_ADDRESS, DURATION, OPERATION_TIME ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
+2022-06-27 11:55:17.939 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserOperationLogMapper.insert - ==> Parameters: 4ec3e2f1b15a95f7e07baa449dffeaa5(String), admin(String), TbOrderInfo(String), 删除(String), delete(String), {}(String), 127.0.0.1(String), 31(Long), 2022-06-27T11:55:17.939337300(LocalDateTime)
+2022-06-27 11:55:17.939 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserOperationLogMapper.insert - <==    Updates: 1
+2022-06-27 11:55:18.565 [http-nio-8888-exec-2] DEBUG cn.wolfcode.web.commons.interceptors.LoginInterceptor - 当前访问接口:/orderinfo/list
+2022-06-27 11:55:18.568 [http-nio-8888-exec-2] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==>  Preparing: SELECT user_id,username,password,old_password,nick_name,phone,email,disable,login_status,create_user_id,create_time,update_time,delete_time,login_time,remark,dept_id FROM SYS_USER_INFO WHERE user_id=? 
+2022-06-27 11:55:18.569 [http-nio-8888-exec-2] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==> Parameters: 1115864462813077506(String)
+2022-06-27 11:55:18.570 [http-nio-8888-exec-2] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - <==      Total: 1
+2022-06-27 11:55:18.730 [http-nio-8888-exec-2] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.selectPage - ==>  Preparing: SELECT COUNT(1) FROM tb_order_info 
+2022-06-27 11:55:18.733 [http-nio-8888-exec-2] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.selectPage - ==> Parameters: 
+2022-06-27 11:55:18.734 [http-nio-8888-exec-2] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.selectPage - ==>  Preparing: SELECT id,cust_id,prod_name,amounts,price,status,receiver,link_phone,address,logistcs,logistics_code,deliver_time,receive_time,input_time,input_user_id FROM tb_order_info LIMIT ?,? 
+2022-06-27 11:55:18.736 [http-nio-8888-exec-2] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.selectPage - ==> Parameters: 0(Long), 10(Long)
+2022-06-27 11:55:18.739 [http-nio-8888-exec-2] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.selectPage - <==      Total: 3
+2022-06-27 11:57:15.710 [http-nio-8888-exec-9] DEBUG cn.wolfcode.web.commons.interceptors.LoginInterceptor - 当前访问接口:/orderinfo/list.html
+2022-06-27 11:57:15.714 [http-nio-8888-exec-9] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==>  Preparing: SELECT user_id,username,password,old_password,nick_name,phone,email,disable,login_status,create_user_id,create_time,update_time,delete_time,login_time,remark,dept_id FROM SYS_USER_INFO WHERE user_id=? 
+2022-06-27 11:57:15.714 [http-nio-8888-exec-9] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==> Parameters: 1115864462813077506(String)
+2022-06-27 11:57:15.716 [http-nio-8888-exec-9] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - <==      Total: 1
+2022-06-27 11:57:15.793 [http-nio-8888-exec-9] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectList - ==>  Preparing: SELECT id,customer_name,legal_leader,register_date,open_status,province,reg_capital,industry,scope,reg_addr,input_time,update_time,input_user_id FROM tb_customer 
+2022-06-27 11:57:15.795 [http-nio-8888-exec-9] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectList - ==> Parameters: 
+2022-06-27 11:57:15.799 [http-nio-8888-exec-9] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectList - <==      Total: 10
+2022-06-27 11:57:16.954 [http-nio-8888-exec-8] DEBUG cn.wolfcode.web.commons.interceptors.LoginInterceptor - 当前访问接口:/orderinfo/list
+2022-06-27 11:57:16.955 [http-nio-8888-exec-8] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==>  Preparing: SELECT user_id,username,password,old_password,nick_name,phone,email,disable,login_status,create_user_id,create_time,update_time,delete_time,login_time,remark,dept_id FROM SYS_USER_INFO WHERE user_id=? 
+2022-06-27 11:57:16.956 [http-nio-8888-exec-8] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==> Parameters: 1115864462813077506(String)
+2022-06-27 11:57:16.958 [http-nio-8888-exec-8] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - <==      Total: 1
+2022-06-27 11:57:17.048 [http-nio-8888-exec-8] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.selectPage - ==>  Preparing: SELECT COUNT(1) FROM tb_order_info 
+2022-06-27 11:57:17.049 [http-nio-8888-exec-8] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.selectPage - ==> Parameters: 
+2022-06-27 11:57:17.051 [http-nio-8888-exec-8] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.selectPage - ==>  Preparing: SELECT id,cust_id,prod_name,amounts,price,status,receiver,link_phone,address,logistcs,logistics_code,deliver_time,receive_time,input_time,input_user_id FROM tb_order_info LIMIT ?,? 
+2022-06-27 11:57:17.052 [http-nio-8888-exec-8] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.selectPage - ==> Parameters: 0(Long), 10(Long)
+2022-06-27 11:57:17.056 [http-nio-8888-exec-8] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.selectPage - <==      Total: 3
+2022-06-27 11:57:20.208 [http-nio-8888-exec-10] DEBUG cn.wolfcode.web.commons.interceptors.LoginInterceptor - 当前访问接口:/orderinfo/aea3b30eac4ac6613660c1e60890bc0c.html
+2022-06-27 11:57:20.210 [http-nio-8888-exec-10] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==>  Preparing: SELECT user_id,username,password,old_password,nick_name,phone,email,disable,login_status,create_user_id,create_time,update_time,delete_time,login_time,remark,dept_id FROM SYS_USER_INFO WHERE user_id=? 
+2022-06-27 11:57:20.211 [http-nio-8888-exec-10] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==> Parameters: 1115864462813077506(String)
+2022-06-27 11:57:20.212 [http-nio-8888-exec-10] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - <==      Total: 1
+2022-06-27 11:57:20.290 [http-nio-8888-exec-10] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectList - ==>  Preparing: SELECT id,customer_name,legal_leader,register_date,open_status,province,reg_capital,industry,scope,reg_addr,input_time,update_time,input_user_id FROM tb_customer 
+2022-06-27 11:57:20.290 [http-nio-8888-exec-10] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectList - ==> Parameters: 
+2022-06-27 11:57:20.292 [http-nio-8888-exec-10] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectList - <==      Total: 10
+2022-06-27 11:57:20.293 [http-nio-8888-exec-10] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.selectById - ==>  Preparing: SELECT id,cust_id,prod_name,amounts,price,status,receiver,link_phone,address,logistcs,logistics_code,deliver_time,receive_time,input_time,input_user_id FROM tb_order_info WHERE id=? 
+2022-06-27 11:57:20.294 [http-nio-8888-exec-10] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.selectById - ==> Parameters: aea3b30eac4ac6613660c1e60890bc0c(String)
+2022-06-27 11:57:20.295 [http-nio-8888-exec-10] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.selectById - <==      Total: 1
+2022-06-27 11:57:25.343 [http-nio-8888-exec-3] DEBUG cn.wolfcode.web.commons.interceptors.LoginInterceptor - 当前访问接口:/orderinfo/6d01a59cd2b6c78aca4c3cedc9db3f74.html
+2022-06-27 11:57:25.346 [http-nio-8888-exec-3] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==>  Preparing: SELECT user_id,username,password,old_password,nick_name,phone,email,disable,login_status,create_user_id,create_time,update_time,delete_time,login_time,remark,dept_id FROM SYS_USER_INFO WHERE user_id=? 
+2022-06-27 11:57:25.346 [http-nio-8888-exec-3] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==> Parameters: 1115864462813077506(String)
+2022-06-27 11:57:25.348 [http-nio-8888-exec-3] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - <==      Total: 1
+2022-06-27 11:57:25.435 [http-nio-8888-exec-3] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectList - ==>  Preparing: SELECT id,customer_name,legal_leader,register_date,open_status,province,reg_capital,industry,scope,reg_addr,input_time,update_time,input_user_id FROM tb_customer 
+2022-06-27 11:57:25.436 [http-nio-8888-exec-3] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectList - ==> Parameters: 
+2022-06-27 11:57:25.438 [http-nio-8888-exec-3] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectList - <==      Total: 10
+2022-06-27 11:57:25.440 [http-nio-8888-exec-3] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.selectById - ==>  Preparing: SELECT id,cust_id,prod_name,amounts,price,status,receiver,link_phone,address,logistcs,logistics_code,deliver_time,receive_time,input_time,input_user_id FROM tb_order_info WHERE id=? 
+2022-06-27 11:57:25.440 [http-nio-8888-exec-3] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.selectById - ==> Parameters: 6d01a59cd2b6c78aca4c3cedc9db3f74(String)
+2022-06-27 11:57:25.442 [http-nio-8888-exec-3] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.selectById - <==      Total: 1
+2022-06-27 11:58:03.029 [http-nio-8888-exec-2] DEBUG cn.wolfcode.web.commons.interceptors.LoginInterceptor - 当前访问接口:/orderinfo/list.html
+2022-06-27 11:58:03.036 [http-nio-8888-exec-2] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==>  Preparing: SELECT user_id,username,password,old_password,nick_name,phone,email,disable,login_status,create_user_id,create_time,update_time,delete_time,login_time,remark,dept_id FROM SYS_USER_INFO WHERE user_id=? 
+2022-06-27 11:58:03.038 [http-nio-8888-exec-2] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==> Parameters: 1115864462813077506(String)
+2022-06-27 11:58:03.039 [http-nio-8888-exec-2] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - <==      Total: 1
+2022-06-27 11:58:03.107 [http-nio-8888-exec-2] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectList - ==>  Preparing: SELECT id,customer_name,legal_leader,register_date,open_status,province,reg_capital,industry,scope,reg_addr,input_time,update_time,input_user_id FROM tb_customer 
+2022-06-27 11:58:03.108 [http-nio-8888-exec-2] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectList - ==> Parameters: 
+2022-06-27 11:58:03.109 [http-nio-8888-exec-2] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectList - <==      Total: 10
+2022-06-27 11:58:04.166 [http-nio-8888-exec-6] DEBUG cn.wolfcode.web.commons.interceptors.LoginInterceptor - 当前访问接口:/orderinfo/list
+2022-06-27 11:58:04.168 [http-nio-8888-exec-6] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==>  Preparing: SELECT user_id,username,password,old_password,nick_name,phone,email,disable,login_status,create_user_id,create_time,update_time,delete_time,login_time,remark,dept_id FROM SYS_USER_INFO WHERE user_id=? 
+2022-06-27 11:58:04.169 [http-nio-8888-exec-6] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==> Parameters: 1115864462813077506(String)
+2022-06-27 11:58:04.170 [http-nio-8888-exec-6] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - <==      Total: 1
+2022-06-27 11:58:04.248 [http-nio-8888-exec-6] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.selectPage - ==>  Preparing: SELECT COUNT(1) FROM tb_order_info 
+2022-06-27 11:58:04.249 [http-nio-8888-exec-6] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.selectPage - ==> Parameters: 
+2022-06-27 11:58:04.251 [http-nio-8888-exec-6] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.selectPage - ==>  Preparing: SELECT id,cust_id,prod_name,amounts,price,status,receiver,link_phone,address,logistcs,logistics_code,deliver_time,receive_time,input_time,input_user_id FROM tb_order_info LIMIT ?,? 
+2022-06-27 11:58:04.251 [http-nio-8888-exec-6] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.selectPage - ==> Parameters: 0(Long), 10(Long)
+2022-06-27 11:58:04.253 [http-nio-8888-exec-6] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.selectPage - <==      Total: 3
+2022-06-27 11:58:05.439 [http-nio-8888-exec-9] DEBUG cn.wolfcode.web.commons.interceptors.LoginInterceptor - 当前访问接口:/orderinfo/d8696562409f908ecafa27e99bbdcab4.html
+2022-06-27 11:58:05.440 [http-nio-8888-exec-9] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==>  Preparing: SELECT user_id,username,password,old_password,nick_name,phone,email,disable,login_status,create_user_id,create_time,update_time,delete_time,login_time,remark,dept_id FROM SYS_USER_INFO WHERE user_id=? 
+2022-06-27 11:58:05.441 [http-nio-8888-exec-9] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==> Parameters: 1115864462813077506(String)
+2022-06-27 11:58:05.442 [http-nio-8888-exec-9] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - <==      Total: 1
+2022-06-27 11:58:05.504 [http-nio-8888-exec-9] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectList - ==>  Preparing: SELECT id,customer_name,legal_leader,register_date,open_status,province,reg_capital,industry,scope,reg_addr,input_time,update_time,input_user_id FROM tb_customer 
+2022-06-27 11:58:05.504 [http-nio-8888-exec-9] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectList - ==> Parameters: 
+2022-06-27 11:58:05.506 [http-nio-8888-exec-9] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectList - <==      Total: 10
+2022-06-27 11:58:05.507 [http-nio-8888-exec-9] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.selectById - ==>  Preparing: SELECT id,cust_id,prod_name,amounts,price,status,receiver,link_phone,address,logistcs,logistics_code,deliver_time,receive_time,input_time,input_user_id FROM tb_order_info WHERE id=? 
+2022-06-27 11:58:05.508 [http-nio-8888-exec-9] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.selectById - ==> Parameters: d8696562409f908ecafa27e99bbdcab4(String)
+2022-06-27 11:58:05.509 [http-nio-8888-exec-9] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.selectById - <==      Total: 1
+2022-06-27 11:58:13.764 [http-nio-8888-exec-8] DEBUG cn.wolfcode.web.commons.interceptors.LoginInterceptor - 当前访问接口:/orderinfo/6d01a59cd2b6c78aca4c3cedc9db3f74.html
+2022-06-27 11:58:13.767 [http-nio-8888-exec-8] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==>  Preparing: SELECT user_id,username,password,old_password,nick_name,phone,email,disable,login_status,create_user_id,create_time,update_time,delete_time,login_time,remark,dept_id FROM SYS_USER_INFO WHERE user_id=? 
+2022-06-27 11:58:13.768 [http-nio-8888-exec-8] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==> Parameters: 1115864462813077506(String)
+2022-06-27 11:58:13.770 [http-nio-8888-exec-8] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - <==      Total: 1
+2022-06-27 11:58:13.844 [http-nio-8888-exec-8] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectList - ==>  Preparing: SELECT id,customer_name,legal_leader,register_date,open_status,province,reg_capital,industry,scope,reg_addr,input_time,update_time,input_user_id FROM tb_customer 
+2022-06-27 11:58:13.845 [http-nio-8888-exec-8] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectList - ==> Parameters: 
+2022-06-27 11:58:13.846 [http-nio-8888-exec-8] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectList - <==      Total: 10
+2022-06-27 11:58:13.847 [http-nio-8888-exec-8] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.selectById - ==>  Preparing: SELECT id,cust_id,prod_name,amounts,price,status,receiver,link_phone,address,logistcs,logistics_code,deliver_time,receive_time,input_time,input_user_id FROM tb_order_info WHERE id=? 
+2022-06-27 11:58:13.848 [http-nio-8888-exec-8] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.selectById - ==> Parameters: 6d01a59cd2b6c78aca4c3cedc9db3f74(String)
+2022-06-27 11:58:13.849 [http-nio-8888-exec-8] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.selectById - <==      Total: 1
+2022-06-27 11:59:41.095 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.commons.interceptors.LoginInterceptor - 当前访问接口:/orderinfo/list.html
+2022-06-27 11:59:41.101 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==>  Preparing: SELECT user_id,username,password,old_password,nick_name,phone,email,disable,login_status,create_user_id,create_time,update_time,delete_time,login_time,remark,dept_id FROM SYS_USER_INFO WHERE user_id=? 
+2022-06-27 11:59:41.102 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==> Parameters: 1115864462813077506(String)
+2022-06-27 11:59:41.104 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - <==      Total: 1
+2022-06-27 11:59:41.186 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectList - ==>  Preparing: SELECT id,customer_name,legal_leader,register_date,open_status,province,reg_capital,industry,scope,reg_addr,input_time,update_time,input_user_id FROM tb_customer 
+2022-06-27 11:59:41.187 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectList - ==> Parameters: 
+2022-06-27 11:59:41.189 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectList - <==      Total: 10
+2022-06-27 11:59:42.430 [http-nio-8888-exec-5] DEBUG cn.wolfcode.web.commons.interceptors.LoginInterceptor - 当前访问接口:/orderinfo/list
+2022-06-27 11:59:42.431 [http-nio-8888-exec-5] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==>  Preparing: SELECT user_id,username,password,old_password,nick_name,phone,email,disable,login_status,create_user_id,create_time,update_time,delete_time,login_time,remark,dept_id FROM SYS_USER_INFO WHERE user_id=? 
+2022-06-27 11:59:42.432 [http-nio-8888-exec-5] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==> Parameters: 1115864462813077506(String)
+2022-06-27 11:59:42.433 [http-nio-8888-exec-5] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - <==      Total: 1
+2022-06-27 11:59:42.506 [http-nio-8888-exec-5] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.selectPage - ==>  Preparing: SELECT COUNT(1) FROM tb_order_info 
+2022-06-27 11:59:42.507 [http-nio-8888-exec-5] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.selectPage - ==> Parameters: 
+2022-06-27 11:59:42.509 [http-nio-8888-exec-5] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.selectPage - ==>  Preparing: SELECT id,cust_id,prod_name,amounts,price,status,receiver,link_phone,address,logistcs,logistics_code,deliver_time,receive_time,input_time,input_user_id FROM tb_order_info LIMIT ?,? 
+2022-06-27 11:59:42.509 [http-nio-8888-exec-5] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.selectPage - ==> Parameters: 0(Long), 10(Long)
+2022-06-27 11:59:42.510 [http-nio-8888-exec-5] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.selectPage - <==      Total: 3
+2022-06-27 11:59:43.845 [http-nio-8888-exec-6] DEBUG cn.wolfcode.web.commons.interceptors.LoginInterceptor - 当前访问接口:/orderinfo/d8696562409f908ecafa27e99bbdcab4.html
+2022-06-27 11:59:43.847 [http-nio-8888-exec-6] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==>  Preparing: SELECT user_id,username,password,old_password,nick_name,phone,email,disable,login_status,create_user_id,create_time,update_time,delete_time,login_time,remark,dept_id FROM SYS_USER_INFO WHERE user_id=? 
+2022-06-27 11:59:43.853 [http-nio-8888-exec-6] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==> Parameters: 1115864462813077506(String)
+2022-06-27 11:59:43.856 [http-nio-8888-exec-6] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - <==      Total: 1
+2022-06-27 11:59:43.928 [http-nio-8888-exec-6] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectList - ==>  Preparing: SELECT id,customer_name,legal_leader,register_date,open_status,province,reg_capital,industry,scope,reg_addr,input_time,update_time,input_user_id FROM tb_customer 
+2022-06-27 11:59:43.929 [http-nio-8888-exec-6] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectList - ==> Parameters: 
+2022-06-27 11:59:43.934 [http-nio-8888-exec-6] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectList - <==      Total: 10
+2022-06-27 11:59:43.938 [http-nio-8888-exec-6] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.selectById - ==>  Preparing: SELECT id,cust_id,prod_name,amounts,price,status,receiver,link_phone,address,logistcs,logistics_code,deliver_time,receive_time,input_time,input_user_id FROM tb_order_info WHERE id=? 
+2022-06-27 11:59:43.940 [http-nio-8888-exec-6] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.selectById - ==> Parameters: d8696562409f908ecafa27e99bbdcab4(String)
+2022-06-27 11:59:43.942 [http-nio-8888-exec-6] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.selectById - <==      Total: 1
+2022-06-27 12:00:56.158 [http-nio-8888-exec-10] DEBUG cn.wolfcode.web.commons.interceptors.LoginInterceptor - 当前访问接口:/orderinfo/list.html
+2022-06-27 12:00:56.174 [http-nio-8888-exec-10] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==>  Preparing: SELECT user_id,username,password,old_password,nick_name,phone,email,disable,login_status,create_user_id,create_time,update_time,delete_time,login_time,remark,dept_id FROM SYS_USER_INFO WHERE user_id=? 
+2022-06-27 12:00:56.175 [http-nio-8888-exec-10] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==> Parameters: 1115864462813077506(String)
+2022-06-27 12:00:56.176 [http-nio-8888-exec-10] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - <==      Total: 1
+2022-06-27 12:00:56.229 [http-nio-8888-exec-10] DEBUG cn.wolfcode.web.modules.sys.mapper.SysMenuMapper.selectList - ==>  Preparing: SELECT menu_id,menu_name,parent_menu_code,menu_icon,menu_type,sort,menu_code,menu_url,authorization,disable FROM SYS_MENU_INFO ORDER BY SORT DESC 
+2022-06-27 12:00:56.229 [http-nio-8888-exec-10] DEBUG cn.wolfcode.web.modules.sys.mapper.SysMenuMapper.selectList - ==> Parameters: 
+2022-06-27 12:00:56.237 [http-nio-8888-exec-10] DEBUG cn.wolfcode.web.modules.sys.mapper.SysMenuMapper.selectList - <==      Total: 103
+2022-06-27 12:00:56.296 [http-nio-8888-exec-10] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectList - ==>  Preparing: SELECT id,customer_name,legal_leader,register_date,open_status,province,reg_capital,industry,scope,reg_addr,input_time,update_time,input_user_id FROM tb_customer 
+2022-06-27 12:00:56.297 [http-nio-8888-exec-10] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectList - ==> Parameters: 
+2022-06-27 12:00:56.299 [http-nio-8888-exec-10] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectList - <==      Total: 10
+2022-06-27 12:00:57.521 [http-nio-8888-exec-1] DEBUG cn.wolfcode.web.commons.interceptors.LoginInterceptor - 当前访问接口:/orderinfo/list
+2022-06-27 12:00:57.522 [http-nio-8888-exec-1] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==>  Preparing: SELECT user_id,username,password,old_password,nick_name,phone,email,disable,login_status,create_user_id,create_time,update_time,delete_time,login_time,remark,dept_id FROM SYS_USER_INFO WHERE user_id=? 
+2022-06-27 12:00:57.523 [http-nio-8888-exec-1] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==> Parameters: 1115864462813077506(String)
+2022-06-27 12:00:57.525 [http-nio-8888-exec-1] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - <==      Total: 1
+2022-06-27 12:00:57.593 [http-nio-8888-exec-1] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.selectPage - ==>  Preparing: SELECT COUNT(1) FROM tb_order_info 
+2022-06-27 12:00:57.594 [http-nio-8888-exec-1] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.selectPage - ==> Parameters: 
+2022-06-27 12:00:57.595 [http-nio-8888-exec-1] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.selectPage - ==>  Preparing: SELECT id,cust_id,prod_name,amounts,price,status,receiver,link_phone,address,logistcs,logistics_code,deliver_time,receive_time,input_time,input_user_id FROM tb_order_info LIMIT ?,? 
+2022-06-27 12:00:57.595 [http-nio-8888-exec-1] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.selectPage - ==> Parameters: 0(Long), 10(Long)
+2022-06-27 12:00:57.597 [http-nio-8888-exec-1] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.selectPage - <==      Total: 3
+2022-06-27 12:00:59.776 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.commons.interceptors.LoginInterceptor - 当前访问接口:/orderinfo/d8696562409f908ecafa27e99bbdcab4.html
+2022-06-27 12:00:59.778 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==>  Preparing: SELECT user_id,username,password,old_password,nick_name,phone,email,disable,login_status,create_user_id,create_time,update_time,delete_time,login_time,remark,dept_id FROM SYS_USER_INFO WHERE user_id=? 
+2022-06-27 12:00:59.778 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==> Parameters: 1115864462813077506(String)
+2022-06-27 12:00:59.779 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - <==      Total: 1
+2022-06-27 12:00:59.836 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectList - ==>  Preparing: SELECT id,customer_name,legal_leader,register_date,open_status,province,reg_capital,industry,scope,reg_addr,input_time,update_time,input_user_id FROM tb_customer 
+2022-06-27 12:00:59.837 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectList - ==> Parameters: 
+2022-06-27 12:00:59.838 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectList - <==      Total: 10
+2022-06-27 12:00:59.839 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.selectById - ==>  Preparing: SELECT id,cust_id,prod_name,amounts,price,status,receiver,link_phone,address,logistcs,logistics_code,deliver_time,receive_time,input_time,input_user_id FROM tb_order_info WHERE id=? 
+2022-06-27 12:00:59.840 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.selectById - ==> Parameters: d8696562409f908ecafa27e99bbdcab4(String)
+2022-06-27 12:00:59.841 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.selectById - <==      Total: 1
+2022-06-27 12:01:09.771 [http-nio-8888-exec-5] DEBUG cn.wolfcode.web.commons.interceptors.LoginInterceptor - 当前访问接口:/orderinfo/aea3b30eac4ac6613660c1e60890bc0c.html
+2022-06-27 12:01:09.773 [http-nio-8888-exec-5] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==>  Preparing: SELECT user_id,username,password,old_password,nick_name,phone,email,disable,login_status,create_user_id,create_time,update_time,delete_time,login_time,remark,dept_id FROM SYS_USER_INFO WHERE user_id=? 
+2022-06-27 12:01:09.774 [http-nio-8888-exec-5] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==> Parameters: 1115864462813077506(String)
+2022-06-27 12:01:09.775 [http-nio-8888-exec-5] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - <==      Total: 1
+2022-06-27 12:01:09.829 [http-nio-8888-exec-5] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectList - ==>  Preparing: SELECT id,customer_name,legal_leader,register_date,open_status,province,reg_capital,industry,scope,reg_addr,input_time,update_time,input_user_id FROM tb_customer 
+2022-06-27 12:01:09.830 [http-nio-8888-exec-5] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectList - ==> Parameters: 
+2022-06-27 12:01:09.831 [http-nio-8888-exec-5] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectList - <==      Total: 10
+2022-06-27 12:01:09.832 [http-nio-8888-exec-5] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.selectById - ==>  Preparing: SELECT id,cust_id,prod_name,amounts,price,status,receiver,link_phone,address,logistcs,logistics_code,deliver_time,receive_time,input_time,input_user_id FROM tb_order_info WHERE id=? 
+2022-06-27 12:01:09.833 [http-nio-8888-exec-5] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.selectById - ==> Parameters: aea3b30eac4ac6613660c1e60890bc0c(String)
+2022-06-27 12:01:09.835 [http-nio-8888-exec-5] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.selectById - <==      Total: 1
+2022-06-27 12:01:14.864 [http-nio-8888-exec-9] DEBUG cn.wolfcode.web.commons.interceptors.LoginInterceptor - 当前访问接口:/orderinfo/6d01a59cd2b6c78aca4c3cedc9db3f74.html
+2022-06-27 12:01:14.867 [http-nio-8888-exec-9] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==>  Preparing: SELECT user_id,username,password,old_password,nick_name,phone,email,disable,login_status,create_user_id,create_time,update_time,delete_time,login_time,remark,dept_id FROM SYS_USER_INFO WHERE user_id=? 
+2022-06-27 12:01:14.868 [http-nio-8888-exec-9] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==> Parameters: 1115864462813077506(String)
+2022-06-27 12:01:14.869 [http-nio-8888-exec-9] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - <==      Total: 1
+2022-06-27 12:01:14.936 [http-nio-8888-exec-9] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectList - ==>  Preparing: SELECT id,customer_name,legal_leader,register_date,open_status,province,reg_capital,industry,scope,reg_addr,input_time,update_time,input_user_id FROM tb_customer 
+2022-06-27 12:01:14.936 [http-nio-8888-exec-9] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectList - ==> Parameters: 
+2022-06-27 12:01:14.938 [http-nio-8888-exec-9] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectList - <==      Total: 10
+2022-06-27 12:01:14.939 [http-nio-8888-exec-9] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.selectById - ==>  Preparing: SELECT id,cust_id,prod_name,amounts,price,status,receiver,link_phone,address,logistcs,logistics_code,deliver_time,receive_time,input_time,input_user_id FROM tb_order_info WHERE id=? 
+2022-06-27 12:01:14.940 [http-nio-8888-exec-9] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.selectById - ==> Parameters: 6d01a59cd2b6c78aca4c3cedc9db3f74(String)
+2022-06-27 12:01:14.941 [http-nio-8888-exec-9] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.selectById - <==      Total: 1
+2022-06-27 12:01:17.801 [http-nio-8888-exec-8] DEBUG cn.wolfcode.web.commons.interceptors.LoginInterceptor - 当前访问接口:/orderinfo/d8696562409f908ecafa27e99bbdcab4.html
+2022-06-27 12:01:17.805 [http-nio-8888-exec-8] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==>  Preparing: SELECT user_id,username,password,old_password,nick_name,phone,email,disable,login_status,create_user_id,create_time,update_time,delete_time,login_time,remark,dept_id FROM SYS_USER_INFO WHERE user_id=? 
+2022-06-27 12:01:17.805 [http-nio-8888-exec-8] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==> Parameters: 1115864462813077506(String)
+2022-06-27 12:01:17.807 [http-nio-8888-exec-8] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - <==      Total: 1
+2022-06-27 12:01:17.894 [http-nio-8888-exec-8] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectList - ==>  Preparing: SELECT id,customer_name,legal_leader,register_date,open_status,province,reg_capital,industry,scope,reg_addr,input_time,update_time,input_user_id FROM tb_customer 
+2022-06-27 12:01:17.894 [http-nio-8888-exec-8] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectList - ==> Parameters: 
+2022-06-27 12:01:17.897 [http-nio-8888-exec-8] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectList - <==      Total: 10
+2022-06-27 12:01:17.900 [http-nio-8888-exec-8] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.selectById - ==>  Preparing: SELECT id,cust_id,prod_name,amounts,price,status,receiver,link_phone,address,logistcs,logistics_code,deliver_time,receive_time,input_time,input_user_id FROM tb_order_info WHERE id=? 
+2022-06-27 12:01:17.901 [http-nio-8888-exec-8] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.selectById - ==> Parameters: d8696562409f908ecafa27e99bbdcab4(String)
+2022-06-27 12:01:17.902 [http-nio-8888-exec-8] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.selectById - <==      Total: 1
+2022-06-27 12:01:21.651 [http-nio-8888-exec-3] DEBUG cn.wolfcode.web.commons.interceptors.LoginInterceptor - 当前访问接口:/orderinfo/aea3b30eac4ac6613660c1e60890bc0c.html
+2022-06-27 12:01:21.654 [http-nio-8888-exec-3] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==>  Preparing: SELECT user_id,username,password,old_password,nick_name,phone,email,disable,login_status,create_user_id,create_time,update_time,delete_time,login_time,remark,dept_id FROM SYS_USER_INFO WHERE user_id=? 
+2022-06-27 12:01:21.655 [http-nio-8888-exec-3] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==> Parameters: 1115864462813077506(String)
+2022-06-27 12:01:21.656 [http-nio-8888-exec-3] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - <==      Total: 1
+2022-06-27 12:01:21.712 [http-nio-8888-exec-3] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectList - ==>  Preparing: SELECT id,customer_name,legal_leader,register_date,open_status,province,reg_capital,industry,scope,reg_addr,input_time,update_time,input_user_id FROM tb_customer 
+2022-06-27 12:01:21.712 [http-nio-8888-exec-3] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectList - ==> Parameters: 
+2022-06-27 12:01:21.714 [http-nio-8888-exec-3] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectList - <==      Total: 10
+2022-06-27 12:01:21.715 [http-nio-8888-exec-3] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.selectById - ==>  Preparing: SELECT id,cust_id,prod_name,amounts,price,status,receiver,link_phone,address,logistcs,logistics_code,deliver_time,receive_time,input_time,input_user_id FROM tb_order_info WHERE id=? 
+2022-06-27 12:01:21.716 [http-nio-8888-exec-3] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.selectById - ==> Parameters: aea3b30eac4ac6613660c1e60890bc0c(String)
+2022-06-27 12:01:21.717 [http-nio-8888-exec-3] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.selectById - <==      Total: 1
+2022-06-27 12:01:27.304 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.commons.interceptors.LoginInterceptor - 当前访问接口:/orderinfo/aea3b30eac4ac6613660c1e60890bc0c.html
+2022-06-27 12:01:27.312 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==>  Preparing: SELECT user_id,username,password,old_password,nick_name,phone,email,disable,login_status,create_user_id,create_time,update_time,delete_time,login_time,remark,dept_id FROM SYS_USER_INFO WHERE user_id=? 
+2022-06-27 12:01:27.313 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==> Parameters: 1115864462813077506(String)
+2022-06-27 12:01:27.315 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - <==      Total: 1
+2022-06-27 12:01:27.395 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectList - ==>  Preparing: SELECT id,customer_name,legal_leader,register_date,open_status,province,reg_capital,industry,scope,reg_addr,input_time,update_time,input_user_id FROM tb_customer 
+2022-06-27 12:01:27.396 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectList - ==> Parameters: 
+2022-06-27 12:01:27.400 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectList - <==      Total: 10
+2022-06-27 12:01:27.405 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.selectById - ==>  Preparing: SELECT id,cust_id,prod_name,amounts,price,status,receiver,link_phone,address,logistcs,logistics_code,deliver_time,receive_time,input_time,input_user_id FROM tb_order_info WHERE id=? 
+2022-06-27 12:01:27.406 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.selectById - ==> Parameters: aea3b30eac4ac6613660c1e60890bc0c(String)
+2022-06-27 12:01:27.408 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.orderinfo.mapper.TbOrderInfoMapper.selectById - <==      Total: 1
+2022-06-27 12:02:58.203 [http-nio-8888-exec-9] DEBUG cn.wolfcode.web.commons.interceptors.LoginInterceptor - 当前访问接口:/contractinfo/add.html
+2022-06-27 12:02:58.203 [http-nio-8888-exec-9] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==>  Preparing: SELECT user_id,username,password,old_password,nick_name,phone,email,disable,login_status,create_user_id,create_time,update_time,delete_time,login_time,remark,dept_id FROM SYS_USER_INFO WHERE user_id=? 
+2022-06-27 12:02:58.203 [http-nio-8888-exec-9] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==> Parameters: 1115864462813077506(String)
+2022-06-27 12:02:58.203 [http-nio-8888-exec-9] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - <==      Total: 1
+2022-06-27 12:02:58.312 [http-nio-8888-exec-9] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectList - ==>  Preparing: SELECT id,customer_name,legal_leader,register_date,open_status,province,reg_capital,industry,scope,reg_addr,input_time,update_time,input_user_id FROM tb_customer 
+2022-06-27 12:02:58.312 [http-nio-8888-exec-9] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectList - ==> Parameters: 
+2022-06-27 12:02:58.312 [http-nio-8888-exec-9] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectList - <==      Total: 10
+2022-06-27 12:08:53.437 [SpringContextShutdownHook] INFO  org.springframework.messaging.simp.broker.SimpleBrokerMessageHandler - Stopping...
+2022-06-27 12:08:53.437 [SpringContextShutdownHook] INFO  org.springframework.messaging.simp.broker.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2022-06-27 12:08:53.437 [SpringContextShutdownHook] INFO  org.springframework.messaging.simp.broker.SimpleBrokerMessageHandler - Stopped.
+2022-06-27 12:08:58.453 [SpringContextShutdownHook] WARN  org.springframework.data.redis.listener.RedisMessageListenerContainer - Unable to unsubscribe from subscriptions
+io.lettuce.core.RedisCommandTimeoutException: Command timed out after 5 second(s)
 	at io.lettuce.core.ExceptionFactory.createTimeoutException(ExceptionFactory.java:51)
 	at io.lettuce.core.LettuceFutures.awaitOrCancel(LettuceFutures.java:114)
 	at io.lettuce.core.FutureSyncInvocationHandler.handleInvocation(FutureSyncInvocationHandler.java:69)
 	at io.lettuce.core.internal.AbstractInvocationHandler.invoke(AbstractInvocationHandler.java:80)
-	at com.sun.proxy.$Proxy194.smembers(Unknown Source)
-	at org.springframework.data.redis.connection.lettuce.LettuceSetCommands.sMembers(LettuceSetCommands.java:243)
-	... 17 common frames omitted
-2022-06-24 00:04:31.624 [lettuce-eventExecutorLoop-1-3] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 49.235.85.30:6379
-2022-06-24 00:04:31.624 [lettuce-eventExecutorLoop-1-2] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 49.235.85.30:6379
-2022-06-24 00:04:31.660 [lettuce-nioEventLoop-4-4] INFO  io.lettuce.core.protocol.ReconnectionHandler - Reconnected to 49.235.85.30:6379
-2022-06-24 00:04:31.660 [lettuce-nioEventLoop-4-3] INFO  io.lettuce.core.protocol.ReconnectionHandler - Reconnected to 49.235.85.30:6379
-2022-06-24 00:06:49.619 [SpringContextShutdownHook] INFO  org.springframework.messaging.simp.broker.SimpleBrokerMessageHandler - Stopping...
-2022-06-24 00:06:49.619 [SpringContextShutdownHook] INFO  org.springframework.messaging.simp.broker.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
-2022-06-24 00:06:49.619 [SpringContextShutdownHook] INFO  org.springframework.messaging.simp.broker.SimpleBrokerMessageHandler - Stopped.
-2022-06-24 00:06:50.045 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'brokerChannelExecutor'
-2022-06-24 00:06:50.045 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'messageBrokerTaskScheduler'
-2022-06-24 00:06:50.045 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'clientOutboundChannelExecutor'
-2022-06-24 00:06:50.045 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'clientInboundChannelExecutor'
-2022-06-24 00:06:50.172 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
-2022-06-24 00:06:50.188 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+	at com.sun.proxy.$Proxy198.unsubscribe(Unknown Source)
+	at org.springframework.data.redis.connection.lettuce.LettuceSubscription.doUnsubscribe(LettuceSubscription.java:114)
+	at org.springframework.data.redis.connection.lettuce.LettuceSubscription.doClose(LettuceSubscription.java:70)
+	at org.springframework.data.redis.connection.util.AbstractSubscription.close(AbstractSubscription.java:106)
+	at org.springframework.data.redis.listener.RedisMessageListenerContainer$SubscriptionTask.cancel(RedisMessageListenerContainer.java:866)
+	at org.springframework.data.redis.listener.RedisMessageListenerContainer.stop(RedisMessageListenerContainer.java:225)
+	at org.springframework.data.redis.listener.RedisMessageListenerContainer.stop(RedisMessageListenerContainer.java:183)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStop(DefaultLifecycleProcessor.java:238)
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$300(DefaultLifecycleProcessor.java:53)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.stop(DefaultLifecycleProcessor.java:377)
+	at org.springframework.context.support.DefaultLifecycleProcessor.stopBeans(DefaultLifecycleProcessor.java:210)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onClose(DefaultLifecycleProcessor.java:128)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1021)
+	at org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:948)
+2022-06-27 12:08:58.453 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'brokerChannelExecutor'
+2022-06-27 12:08:58.453 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'messageBrokerTaskScheduler'
+2022-06-27 12:08:58.468 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'clientOutboundChannelExecutor'
+2022-06-27 12:08:58.468 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'clientInboundChannelExecutor'
+2022-06-27 12:08:58.687 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2022-06-27 12:08:58.687 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2022-06-27 12:09:03.045 [main] INFO  cn.wolfcode.WebApplication - Starting WebApplication on WIN-D2EISKISGKK with PID 5976 (D:\myProjectOnIdeaOrOthers\wolfcode-web\wolfcode-web\web\target\classes started by 鸿伟 in D:\myProjectOnIdeaOrOthers\wolfcode-web\wolfcode-web)
+2022-06-27 12:09:03.060 [main] DEBUG cn.wolfcode.WebApplication - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2022-06-27 12:09:03.060 [main] INFO  cn.wolfcode.WebApplication - The following profiles are active: dev
+2022-06-27 12:09:05.561 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-06-27 12:09:05.577 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-06-27 12:09:05.639 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 57ms. Found 0 Redis repository interfaces.
+2022-06-27 12:09:06.295 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration$DataSourceTransactionManagerConfiguration' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration$DataSourceTransactionManagerConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 12:09:06.295 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure' of type [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure$$EnhancerBySpringCGLIB$$61946c9f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 12:09:06.311 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2022-06-27 12:09:06.373 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 12:09:06.389 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidFilterConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidFilterConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 12:09:06.420 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'statFilter' of type [com.alibaba.druid.filter.stat.StatFilter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 12:09:06.530 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'wallConfig' of type [com.alibaba.druid.wall.WallConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 12:09:06.561 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'wallFilter' of type [com.alibaba.druid.wall.WallFilter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 12:09:06.717 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2022-06-27 12:09:06.717 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'dataSource' of type [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceWrapper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 12:09:06.780 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 12:09:06.795 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration' of type [org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 12:09:06.795 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.transaction-org.springframework.boot.autoconfigure.transaction.TransactionProperties' of type [org.springframework.boot.autoconfigure.transaction.TransactionProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 12:09:06.811 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'platformTransactionManagerCustomizers' of type [org.springframework.boot.autoconfigure.transaction.TransactionManagerCustomizers] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 12:09:06.811 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'transactionManager' of type [org.springframework.jdbc.datasource.DataSourceTransactionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 12:09:06.811 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'transactionAdviceConfig' of type [cn.wolfcode.web.commons.config.TransactionAdviceConfig$$EnhancerBySpringCGLIB$$2a92ddca] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 12:09:06.826 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'txAdvice' of type [org.springframework.transaction.interceptor.TransactionInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 12:09:06.826 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'txAdviceAdvisor' of type [org.springframework.aop.support.DefaultPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 12:09:06.842 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 12:09:06.858 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 12:09:06.873 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@2eda2062' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 12:09:06.873 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 12:09:06.889 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 12:09:07.327 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2022-06-27 12:09:07.327 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2022-06-27 12:09:07.327 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-06-27 12:09:07.327 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.31]
+2022-06-27 12:09:07.452 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/nebula-web] - Initializing Spring embedded WebApplicationContext
+2022-06-27 12:09:07.452 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4329 ms
+2022-06-27 12:09:08.124 [main] WARN  com.baomidou.mybatisplus.core.metadata.TableInfoHelper - Warn: Could not find @TableId in Class: cn.wolfcode.web.modules.sys.entity.SysRoleByMenu.
+2022-06-27 12:09:09.296 [main] INFO  org.springframework.boot.web.servlet.RegistrationBean - Filter loginInterceptor was not registered (disabled)
+2022-06-27 12:09:10.124 [main] WARN  com.baomidou.mybatisplus.core.metadata.TableInfoHelper - Warn: Could not find @TableId in Class: cn.wolfcode.web.modules.sys.entity.SysUserRole.
+2022-06-27 12:09:10.514 [main] INFO  o.s.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: c237ff30-d274-4d36-9726-673e1ee3be3a
+
+2022-06-27 12:09:10.592 [main] INFO  org.springframework.security.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/{spring:^(static|druid|images|sign|druid|error)$}/**'], []
+2022-06-27 12:09:10.592 [main] INFO  org.springframework.security.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/**/{spring:^.*\.((?!html).)*$}'], []
+2022-06-27 12:09:10.686 [main] INFO  org.springframework.security.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@38caad07, org.springframework.security.web.context.SecurityContextPersistenceFilter@5614ae05, org.springframework.security.web.header.HeaderWriterFilter@5807ea46, org.springframework.security.web.authentication.logout.LogoutFilter@24f3fb87, cn.wolfcode.web.commons.interceptors.LoginInterceptor@3e753289, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3bb4c2b2, org.springframework.security.web.session.ConcurrentSessionFilter@45f95ac0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4eb48298, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6516181f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@15d0b458, org.springframework.security.web.session.SessionManagementFilter@3ee68377, org.springframework.security.web.access.ExceptionTranslationFilter@4189e668, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7097d921]
+2022-06-27 12:09:10.717 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'clientInboundChannelExecutor'
+2022-06-27 12:09:10.733 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'clientOutboundChannelExecutor'
+2022-06-27 12:09:10.749 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'messageBrokerTaskScheduler'
+2022-06-27 12:09:10.827 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'brokerChannelExecutor'
+2022-06-27 12:09:11.218 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2022-06-27 12:09:12.218 [main] INFO  io.lettuce.core.EpollProvider - Starting without optional epoll library
+2022-06-27 12:09:12.218 [main] INFO  io.lettuce.core.KqueueProvider - Starting without optional kqueue library
+2022-06-27 12:09:12.842 [main] INFO  org.springframework.messaging.simp.broker.SimpleBrokerMessageHandler - Starting...
+2022-06-27 12:09:12.842 [main] INFO  org.springframework.messaging.simp.broker.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2022-06-27 12:09:12.842 [main] INFO  org.springframework.messaging.simp.broker.SimpleBrokerMessageHandler - Started.
+2022-06-27 12:09:13.452 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2022-06-27 12:09:13.468 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path '/nebula-web'
+2022-06-27 12:09:13.468 [main] INFO  cn.wolfcode.WebApplication - Started WebApplication in 11.117 seconds (JVM running for 13.184)
+2022-06-27 12:09:30.340 [http-nio-8888-exec-1] INFO  org.apache.tomcat.util.http.parser.Cookie - A cookie header was received [1655475215] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2022-06-27 12:09:30.355 [http-nio-8888-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/nebula-web] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-27 12:09:30.355 [http-nio-8888-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-06-27 12:09:30.377 [http-nio-8888-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 22 ms
+2022-06-27 12:09:30.741 [http-nio-8888-exec-1] DEBUG cn.wolfcode.web.commons.interceptors.LoginInterceptor - 当前访问接口:/orderinfo/add.html
+2022-06-27 12:09:30.799 [http-nio-8888-exec-1] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==>  Preparing: SELECT user_id,username,password,old_password,nick_name,phone,email,disable,login_status,create_user_id,create_time,update_time,delete_time,login_time,remark,dept_id FROM SYS_USER_INFO WHERE user_id=? 
+2022-06-27 12:09:31.021 [http-nio-8888-exec-1] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==> Parameters: 1115864462813077506(String)
+2022-06-27 12:09:31.059 [http-nio-8888-exec-1] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - <==      Total: 1
+2022-06-27 12:09:31.218 [http-nio-8888-exec-1] DEBUG cn.wolfcode.web.modules.sys.mapper.SysMenuMapper.selectList - ==>  Preparing: SELECT menu_id,menu_name,parent_menu_code,menu_icon,menu_type,sort,menu_code,menu_url,authorization,disable FROM SYS_MENU_INFO ORDER BY SORT DESC 
+2022-06-27 12:09:31.225 [http-nio-8888-exec-1] DEBUG cn.wolfcode.web.modules.sys.mapper.SysMenuMapper.selectList - ==> Parameters: 
+2022-06-27 12:09:31.265 [http-nio-8888-exec-1] DEBUG cn.wolfcode.web.modules.sys.mapper.SysMenuMapper.selectList - <==      Total: 103
+2022-06-27 12:09:31.441 [http-nio-8888-exec-1] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectList - ==>  Preparing: SELECT id,customer_name,legal_leader,register_date,open_status,province,reg_capital,industry,scope,reg_addr,input_time,update_time,input_user_id FROM tb_customer 
+2022-06-27 12:09:31.443 [http-nio-8888-exec-1] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectList - ==> Parameters: 
+2022-06-27 12:09:31.450 [http-nio-8888-exec-1] DEBUG cn.wolfcode.web.modules.custinfo.mapper.TbCustomerMapper.selectList - <==      Total: 10
+2022-06-27 12:09:34.137 [http-nio-8888-exec-3] DEBUG cn.wolfcode.web.commons.interceptors.LoginInterceptor - 当前访问接口:/linkman/listByCustomerId
+2022-06-27 12:09:34.140 [http-nio-8888-exec-3] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==>  Preparing: SELECT user_id,username,password,old_password,nick_name,phone,email,disable,login_status,create_user_id,create_time,update_time,delete_time,login_time,remark,dept_id FROM SYS_USER_INFO WHERE user_id=? 
+2022-06-27 12:09:34.141 [http-nio-8888-exec-3] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==> Parameters: 1115864462813077506(String)
+2022-06-27 12:09:34.143 [http-nio-8888-exec-3] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - <==      Total: 1
+2022-06-27 12:09:34.221 [http-nio-8888-exec-3] DEBUG cn.wolfcode.web.modules.linkman.controller.TbCustLinkmanController - 企业id参数接收：1
+2022-06-27 12:09:34.243 [http-nio-8888-exec-3] DEBUG cn.wolfcode.web.modules.linkman.mapper.TbCustLinkmanMapper.selectList - ==>  Preparing: SELECT id,cust_id,linkman,sex,age,phone,position,department,remark,input_user,input_time FROM tb_cust_linkman WHERE (cust_id = ?) 
+2022-06-27 12:09:34.245 [http-nio-8888-exec-3] DEBUG cn.wolfcode.web.modules.linkman.mapper.TbCustLinkmanMapper.selectList - ==> Parameters: 1(String)
+2022-06-27 12:09:34.247 [http-nio-8888-exec-3] DEBUG cn.wolfcode.web.modules.linkman.mapper.TbCustLinkmanMapper.selectList - <==      Total: 1
+2022-06-27 12:09:36.157 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.commons.interceptors.LoginInterceptor - 当前访问接口:/orderinfo/save
+2022-06-27 12:09:36.159 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==>  Preparing: SELECT user_id,username,password,old_password,nick_name,phone,email,disable,login_status,create_user_id,create_time,update_time,delete_time,login_time,remark,dept_id FROM SYS_USER_INFO WHERE user_id=? 
+2022-06-27 12:09:36.160 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - ==> Parameters: 1115864462813077506(String)
+2022-06-27 12:09:36.162 [http-nio-8888-exec-4] DEBUG cn.wolfcode.web.modules.sys.mapper.SysUserMapper.selectById - <==      Total: 1
+2022-06-27 12:09:36.397 [http-nio-8888-exec-4] ERROR cn.wolfcode.web.commons.exception.ExceptionAdvice - org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<link.ahsj.core.entitys.ApiModel> cn.wolfcode.web.modules.orderinfo.controller.TbOrderInfoController.save(cn.wolfcode.web.modules.orderinfo.entity.TbOrderInfo,javax.servlet.http.HttpServletRequest,java.lang.String): [Field error in object 'tbOrderInfo' on field 'prodName': rejected value []; codes [NotBlank.tbOrderInfo.prodName,NotBlank.prodName,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [tbOrderInfo.prodName,prodName]; arguments []; default message [prodName]]; default message [!产品名称不能为空!]] 
+org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<link.ahsj.core.entitys.ApiModel> cn.wolfcode.web.modules.orderinfo.controller.TbOrderInfoController.save(cn.wolfcode.web.modules.orderinfo.entity.TbOrderInfo,javax.servlet.http.HttpServletRequest,java.lang.String): [Field error in object 'tbOrderInfo' on field 'prodName': rejected value []; codes [NotBlank.tbOrderInfo.prodName,NotBlank.prodName,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [tbOrderInfo.prodName,prodName]; arguments []; default message [prodName]]; default message [!产品名称不能为空!]] 
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:139)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:167)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:134)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:64)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at link.ahsj.core.http.xss.XssFilter.doFilter(XssFilter.java:89)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:126)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:90)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:118)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:158)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.session.ConcurrentSessionFilter.doFilter(ConcurrentSessionFilter.java:152)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at cn.wolfcode.web.commons.interceptors.LoginInterceptor.doFilter(LoginInterceptor.java:78)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.session.web.http.SessionRepositoryFilter.doFilterInternal(SessionRepositoryFilter.java:141)
+	at org.springframework.session.web.http.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:82)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-06-27 12:10:10.829 [MessageBroker-2] INFO  org.springframework.web.socket.config.WebSocketMessageBrokerStats - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 3, active threads = 1, queued tasks = 1, completed tasks = 1]
+2022-06-27 12:26:58.363 [SpringContextShutdownHook] INFO  org.springframework.messaging.simp.broker.SimpleBrokerMessageHandler - Stopping...
+2022-06-27 12:26:58.363 [SpringContextShutdownHook] INFO  org.springframework.messaging.simp.broker.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2022-06-27 12:26:58.363 [SpringContextShutdownHook] INFO  org.springframework.messaging.simp.broker.SimpleBrokerMessageHandler - Stopped.
+2022-06-27 12:27:03.412 [SpringContextShutdownHook] WARN  org.springframework.data.redis.listener.RedisMessageListenerContainer - Unable to unsubscribe from subscriptions
+io.lettuce.core.RedisCommandTimeoutException: Command timed out after 5 second(s)
+	at io.lettuce.core.ExceptionFactory.createTimeoutException(ExceptionFactory.java:51)
+	at io.lettuce.core.LettuceFutures.awaitOrCancel(LettuceFutures.java:114)
+	at io.lettuce.core.FutureSyncInvocationHandler.handleInvocation(FutureSyncInvocationHandler.java:69)
+	at io.lettuce.core.internal.AbstractInvocationHandler.invoke(AbstractInvocationHandler.java:80)
+	at com.sun.proxy.$Proxy198.unsubscribe(Unknown Source)
+	at org.springframework.data.redis.connection.lettuce.LettuceSubscription.doUnsubscribe(LettuceSubscription.java:114)
+	at org.springframework.data.redis.connection.lettuce.LettuceSubscription.doClose(LettuceSubscription.java:70)
+	at org.springframework.data.redis.connection.util.AbstractSubscription.close(AbstractSubscription.java:106)
+	at org.springframework.data.redis.listener.RedisMessageListenerContainer$SubscriptionTask.cancel(RedisMessageListenerContainer.java:866)
+	at org.springframework.data.redis.listener.RedisMessageListenerContainer.stop(RedisMessageListenerContainer.java:225)
+	at org.springframework.data.redis.listener.RedisMessageListenerContainer.stop(RedisMessageListenerContainer.java:183)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStop(DefaultLifecycleProcessor.java:238)
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$300(DefaultLifecycleProcessor.java:53)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.stop(DefaultLifecycleProcessor.java:377)
+	at org.springframework.context.support.DefaultLifecycleProcessor.stopBeans(DefaultLifecycleProcessor.java:210)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onClose(DefaultLifecycleProcessor.java:128)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1021)
+	at org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:948)
+2022-06-27 12:27:03.412 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'brokerChannelExecutor'
+2022-06-27 12:27:03.412 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'messageBrokerTaskScheduler'
+2022-06-27 12:27:03.412 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'clientOutboundChannelExecutor'
+2022-06-27 12:27:03.412 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'clientInboundChannelExecutor'
+2022-06-27 12:27:03.553 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2022-06-27 12:27:03.553 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed

@@ -26,12 +26,13 @@ public class TbOrderInfo implements Serializable {
     /**
      * 所属客户id
      */
-
+    @NotBlank(message = "!客户不能为空!",groups = {AddGroup.class})
     private String custId;
 
     /**
      * 产品名称
      */
+    @NotBlank(message = "!产品名称不能为空!",groups = {AddGroup.class})
     private String prodName;
 
     /**

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.wolfcode.web.modules.sys.mapper.SysMenuMapper">
+
+    <select id="queryMenuParentName" resultType="cn.wolfcode.web.modules.sys.entity.SysMenu">
+        SELECT child.MENU_CODE, parent.MENU_ID, parent.MENU_NAME
+        FROM SYS_MENU_INFO child
+                 LEFT JOIN SYS_MENU_INFO parent on child.PARENT_MENU_CODE = parent.MENU_CODE
+        where child.PARENT_MENU_CODE = #{parentMenuCode}
+    </select>
+
+    <select id="queryParentId" resultType="java.lang.String">
+        select parent.MENU_ID
+        from SYS_MENU_INFO child
+                 left join SYS_MENU_INFO parent on child.MENU_CODE = parent.MENU_CODE
+        where child.MENU_CODE = #{childId}
+    </select>
+    <select id="queryList" resultType="java.util.Map">
+        select menu_id,menu_name,parent_menu_code,menu_icon,menu_type,sort,menu_code,menu_url,authorization,disable from
+        SYS_MENU_INFO
+    </select>
+    <select id="selectByUserName" resultType="cn.wolfcode.web.modules.sys.entity.SysMenu">
+        SELECT DISTINCT m.*
+        FROM SYS_MENU_INFO m
+                 INNER JOIN SYS_ROLE_MENU rm ON rm.MENU_CODE = m.MENU_CODE
+                 INNER JOIN SYS_USER_ROLE ur ON ur.ROLE_ID = rm.ROLE_ID
+                 INNER JOIN SYS_ROLE_INFO r ON ur.ROLE_ID = r.ROLE_ID
+                 INNER JOIN SYS_USER_INFO u ON u.USER_ID = ur.USER_ID
+        WHERE u.USERNAME = #{username}
+          AND m.DISABLE = 0
+          AND r.DISABLE = 0
+          AND u.DISABLE = 0
+        ORDER BY m.SORT DESC
+    </select>
+
+    <select id="queryRoleMenus" resultType="cn.wolfcode.web.modules.sys.entity.SysMenu">
+        SELECT m.*
+        FROM SYS_MENU_INFO m
+                 INNER JOIN SYS_ROLE_MENU rm ON rm.MENU_CODE = m.MENU_CODE
+        WHERE rm.ROLE_ID = #{roleId}
+    </select>
+</mapper>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.wolfcode.web.modules.sys.mapper.SysUserLoginLogMapper">
+    <select id="queryLoginLogList" resultType="cn.wolfcode.web.modules.sys.entity.SysUserLoginLog">
+        select ID,USER_NAME,LOGIN_TIME,SUCCESS,ERROR_LOG,IP_ADDRESS,DURATION,OPERATION_TIME from SYS_USER_LOGIN_LOG
+        <where>
+            <if test="sysLoginLogForm.userName!='' and sysLoginLogForm.userName!=null">
+                and USER_NAME like concat('%',#{sysLoginLogForm.userName},'%')
+            </if>
+            <if test="sysLoginLogForm.success!='' and sysLoginLogForm.success!=null">
+                and SUCCESS = #{sysLoginLogForm.success}
+            </if>
+            <if test="sysLoginLogForm.startDate!='' and sysLoginLogForm.startDate!=null">
+                and OPERATION_TIME &gt;=#{sysLoginLogForm.startDate}
+            </if>
+            <if test="sysLoginLogForm.endDate!='' and sysLoginLogForm.endDate!=null">
+                and OPERATION_TIME &lt;=#{sysLoginLogForm.endDate}
+            </if>
+        </where>
+        ORDER BY OPERATION_TIME DESC
+    </select>
+</mapper>

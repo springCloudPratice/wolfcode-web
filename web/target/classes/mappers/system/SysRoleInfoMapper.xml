@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.wolfcode.web.modules.sys.mapper.SysRoleInfoMapper">
+
+    <select id="queryUserRole" resultType="cn.wolfcode.web.modules.sys.entity.SysRoleInfo">
+        SELECT r.ROLE_ID, r.ROLE_NAME, r.DESCRIPTION, r.ROLE_CODE, r.CREATE_TIME, r.DISABLE
+        FROM SYS_ROLE_INFO r
+                 INNER JOIN SYS_USER_ROLE ur ON ur.ROLE_ID = r.ROLE_ID
+        WHERE ur.USER_ID = #{userId}
+          AND r.DISABLE = 0
+    </select>
+</mapper>

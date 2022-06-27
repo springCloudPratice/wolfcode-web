@@ -1,0 +1,181 @@
+#配置sql监控的,你是什么数据库就写什么 mysql,mysql,sqlserver
+druid-sql-type: mysql
+#druid监控打开, stat-view stat,wall 全部引用到了,火力全开
+druid-enabled: true
+#druid sql 监控异常抛出配置 生产的时候异常就要抛出,测试环境,只要打印出来就行
+# 刚开始引入WallFilter的时候，把logViolation设置为true，而throwException设置为false。就可以观察是否存在违规的情况，同时不影响业务运行。
+#对被认为是攻击的SQL进行LOG.error输出
+druid-log-violation: true
+#对被认为是攻击的SQL抛出SQLException
+druid-throw-exception: false
+#redis 过期时间
+app:
+  config:
+    default-expire: 100
+spring:
+  profiles:
+    active: dev
+  datasource:
+    druid:
+      stat-view-servlet:
+        loginUsername: ${datasource.druid.login-username}
+        loginPassword: ${datasource.druid.login-password}
+        enabled: ${druid-enabled}
+      #白名单IP白名单 (没有配置或者为空，则允许所有访问)
+      #        allow:
+      #IP黑名单 (存在共同时，deny优先于allow)
+      #        deny:
+      #        url-pattern: /druid/*
+      min-idle: 5
+      max-active: 10
+      initial-size: 1
+      validation-query-timeout: 1
+      #申请连接时执行validationQuery检测连接是否有效
+      test-on-borrow: false
+      #归还连接时执行validationQuery检测连接是否有效
+      test-on-return: false
+      #申请连接的时候检测，如果空闲时间大于timeBetweenEvictionRunsMillis，执行validationQuery检测连接是否有效。
+      test-while-idle: true
+      # 获取连接时最大等待时间，单位毫秒。配置了maxWait之后，缺省启用公平锁，并发效率会有所下降，如果需要可以通过配置useUnfairLock属性为true使用非公平锁。
+      max-wait: 30000
+      # 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+      time-between-eviction-runs-millis: 2000
+      #连接保持空闲而不被驱逐的最小时间,单位是毫秒
+      min-evictable-idle-time-millis: 600000
+      max-evictable-idle-time-millis: 900000
+      filter:
+        # https://github.com/alibaba/druid/wiki/%E9%85%8D%E7%BD%AE-wallfilter
+        stat:
+          db-type: ${druid-sql-type}
+          log-slow-sql: true
+          #2秒算慢sql
+          slow-sql-millis: 2000
+          merge-sql: true
+          enabled: ${druid-enabled}
+        wall:
+          db-type: ${druid-sql-type}
+          config:
+            # 是否允许非以上基本语句的其他语句，缺省关闭，通过这个选项就能够屏蔽DDL。
+            none-base-statement-allow: true
+            # 检查DELETE语句是否无where条件，这是有风险的，但不是SQL注入类型的风险
+            delete-where-none-check: true
+            # 检查UPDATE语句是否无where条件，这是有风险的，但不是SQL注入类型的风险
+            update-where-none-check: true
+            #是否允许 truncate语句
+            truncate-allow: false
+            #是否允许drop表
+            drop-table-allow: false
+          # 刚开始引入WallFilter的时候，把logViolation设置为true，而throwException设置为false。就可以观察是否存在违规的情况，同时不影响业务运行。
+          #对被认为是攻击的SQL进行LOG.error输出
+          log-violation: ${druid-log-violation}
+          #对被认为是攻击的SQL抛出SQLException
+          throw-exception: ${druid-throw-exception}
+          #是否开启过滤器
+          enabled: ${druid-enabled}
+      filters: stat,wall
+      # 用来检测连接是否有效的sql，要求是一个查询语句。如果validationQuery为null，testOnBorrow、testOnReturn、testWhileIdle都不会其作用。
+      validation-query: ${datasource.mysql.validation-query}
+      driver-class-name: ${datasource.mysql.driver}
+      username: ${datasource.mysql.username}
+      password: ${datasource.mysql.password}
+      url: ${datasource.mysql.url}
+      #
+      keep-alive: true
+      phy-max-use-count: 500
+      #异步关闭链接启用
+      async-init: true
+      async-close-connection-enable: true
+  redis:
+    password: ${datasource.redis.password}
+    database: ${datasource.redis.database}
+    port: ${datasource.redis.port}
+    jedis:
+      pool:
+        max-idle: 0
+        min-idle: 0
+        max-active: 8
+        max-wait: -1s
+    host: ${datasource.redis.ip}
+    ssl: false
+    timeout: 5s
+  session:
+    store-type: redis
+    redis:
+      namespace: ${spring.application.name}:AHSJ:SESSION
+    timeout: 1800s
+  freemarker:
+    cache: true
+    charset: UTF-8
+    check-template-location: true
+    content-type: text/html
+    suffix: .ftl
+    template-loader-path: classpath:/templates/
+    settings.template_update_delay: 0
+    settings.default_encoding: UTF-8
+    settings.classic_compatible: true
+    settings.datetime_format: "yyyy-MM-dd HH:mm:ss"
+    request-context-attribute: request
+  application:
+    name: nebula-web
+  cache:
+    type: redis
+    redis:
+      key-prefix: '${spring.application.name}:AHSJ:CACHE:'
+      time-to-live: 300s
+    cache-names: ${spring.application.name}
+logging:
+  level:
+    cn:
+      wolfcode: debug
+    org:
+      springframework: info
+    root: info
+  file:
+    name: ${spring.application.name}
+    path: log/
+server:
+  port: 8888
+  servlet:
+    context-path: /${spring.application.name}
+    session:
+      cookie:
+        name: AHSJ-SESSION
+#mybatis
+mybatis-plus:
+  mapper-locations: classpath*:mappers/**/*.xml
+  #实体扫描，多个package用逗号或者分号分隔
+  typeAliasesPackage: cn.wolfcode.*.modules.*.entity
+  global-config:
+    # 数据库相关配置
+    db-config:
+      #主键类型  AUTO:"数据库ID自增", INPUT:"用户输入ID",ID_WORKER:"全局唯一ID (数字类型唯一ID)", UUID:"全局唯一ID UUID";
+      id-type: ASSIGN_UUID
+      #字段策略 IGNORED:"忽略判断",NOT_NULL:"非 NULL 判断"),NOT_EMPTY:"非空判断"
+      #数据库大写下划线转换
+      #      capital-mode: true
+      #逻辑删除配置
+      logic-delete-value: 0
+      logic-not-delete-value: 1
+    banner: false
+  # 原生配置
+  configuration:
+    map-underscore-to-camel-case: true
+    #关闭缓存
+    cache-enabled: false
+    # 3.0.8之前版本问题默认将枚举注册为EnumOrdinalTypeHandler,这是错误的方式,默认是 org.apache.ibatis.type.EnumTypeHandler
+    # 如果项目之中实体统一使用IEnum或注解的方式,可配置成 com.baomidou.mybatisplus.extension.handlers.EnumTypeHandler,也可省略上面的type-enums-package配置
+    # 配置type-enums-package只对注解方式的枚举处理能提前加载缓存.
+    default-enum-type-handler: org.apache.ibatis.type.EnumOrdinalTypeHandler
+  type-enums-package: cn.wolfcode.web.commons.enums
+
+#拦截器放行
+interceptor:
+  release:
+      #过滤器放行 /static/**,*.ico,/layuiadmin/**,error
+      filter: /open/**,/sign/**,error
+      #拦截器放行
+      security: /open/**,/file/**,/sign/**,/error,/**.html
+      # xss放行路径
+      xss: /file/**,/error,/**.html
+      #xss正则放行规则 "/**/*.js", "/**/*.css", "/**/*.woff*", "/**/*.gif", "/**/*.json", "/**/*.png", "/**/*.jpg", "/**/*.jpeg", "*.ico"
+      xss-pattern: ^.*\.((?!html).)*$

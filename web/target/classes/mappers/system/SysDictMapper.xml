@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.wolfcode.web.modules.sys.mapper.SysDictMapper">
+
+    <select id="queryList" resultType="java.util.Map">
+        SELECT ID AS "diceId",
+        DICE_CODE AS "diceCode",
+        PARENT_DICE_CODE AS "parentDiceCode",
+        DICE_NAME AS "diceName",
+        DICE_VALUE AS "diceValue",
+        DESCRIPTION AS "description",
+        (
+        CASE DISABLE
+        WHEN 0 THEN '正常'
+        WHEN 1 THEN '已删除'
+        ELSE '未知'
+        END
+        ) AS "disable"
+        FROM SYS_DICE_INFO
+        <where>
+            <if test="diceCodes!=null and diceCodes.size>0">
+                AND
+                <foreach collection="diceCodes" item="code" open="DICE_CODE IN (" close=")" separator=",">
+                    #{code}
+                </foreach>
+            </if>
+        </where>
+        ORDER BY DISABLE DESC
+    </select>
+
+
+    <select id="queryDictCode" resultType="cn.wolfcode.web.modules.sys.entity.SysDict">
+        SELECT DICE_CODE AS "diceCode", PARENT_DICE_CODE AS "parentDiceCode"
+        FROM SYS_DICE_INFO
+        <where>
+            <if test="dictName!=null and dictName!=''">AND DICE_NAME LIKE CONCAT('%',#{dictName},'%')
+            </if>
+            <if test="diceCodes!=null and diceCodes.length>0">
+                AND
+                (
+                <foreach collection="diceCodes" item="code" open="DICE_CODE IN (" close=")" separator=",">
+                    #{code}
+                </foreach>
+                OR
+                <foreach collection="diceCodes" item="code" open="PARENT_DICE_CODE IN (" close=")" separator=",">
+                    #{code}
+                </foreach>
+                )
+            </if>
+        </where>
+        ORDER BY SORT DESC
+    </select>
+</mapper>

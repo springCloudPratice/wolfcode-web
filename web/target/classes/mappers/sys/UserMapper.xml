@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.wolfcode.web.modules.sys.mapper.UserMapper">
+
+    <select id="queryList" resultType="cn.wolfcode.web.modules.sys.vo.SysUserVo">
+       SELECT
+        A.USER_ID,
+        A.USERNAME,
+        A.NICK_NAME,
+        A.PHONE,
+        A.CREATE_TIME,
+        A.UPDATE_TIME,
+        A.EMAIL,
+        A.DISABLE,
+        A.LOGIN_STATUS,
+        A.CREATE_USER_ID,
+        A.DELETE_TIME,
+        A.LOGIN_TIME,
+        A.DEPT_ID,
+        B.DEPT_NAME,
+        B.DEPT_PATH
+        FROM SYS_USER_INFO A
+        <!--机构-->
+        LEFT JOIN  SYS_DEPT_INFO B ON A.DEPT_ID = B.DEPT_ID
+        <where>
+            <if test="sysUserForm.username!=null and sysUserForm.username!=''">
+               AND A.USERNAME = #{sysUserForm.username}
+            </if>
+            <if test="sysUserForm.nickName!=null and sysUserForm.nickName!=''">
+                AND A.NICK_NAME LIKE CONCAT(#{sysUserForm.nickName},'%')
+            </if>
+            <if test="sysUserForm.phone!=null and sysUserForm.phone!=''">
+                AND A.PHONE LIKE CONCAT(#{sysUserForm.phone},'%')
+            </if>
+            <if test="sysUserForm.disable!=null">
+                AND A.DISABLE = #{sysUserForm.disable}
+            </if>
+            <!--角色 -->
+            <if test="sysUserForm.roles!=null and sysUserForm.roles.size>0">
+                AND A.USER_ID IN (
+                    SELECT DISTINCT B.USER_ID FROM SYS_ROLE_INFO  A JOIN  SYS_USER_ROLE B  ON A.ROLE_ID = B.ROLE_ID
+                    WHERE A.ROLE_ID IN
+                    <foreach collection="sysUserForm.roles" item="item" open="(" close=")" separator=",">
+                        #{item}
+                    </foreach>
+                )
+            </if>
+            <!--机构-->
+            <if test="sysUserForm.businessLevel!=null and sysUserForm.businessLevel!=''">
+                AND A.DEPT_ID IN (
+                SELECT DISTINCT DEPT_ID FROM SYS_DEPT_INFO WHERE BUSINESS_LEVEL LIKE CONCAT(#{sysUserForm.businessLevel},'%')
+                )
+            </if>
+        </where>
+         ORDER BY A.DISABLE DESC, A.LOGIN_TIME DESC
+    </select>
+</mapper>

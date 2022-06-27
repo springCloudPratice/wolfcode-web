@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.wolfcode.web.modules.sys.mapper.SysUserOperationLogMapper">
+    <select id="queryOperationList" resultType="cn.wolfcode.web.modules.sys.entity.SysUserOperationLog">
+        select ID,USER_NAME,OPERATION_MODULE,OPERATION_TYPE,VISIT_METHOD,PARAMETERS,IP_ADDRESS,DURATION,OPERATION_TIME
+        from SYS_USER_OPERATION_LOG
+        <where>
+            <if test="sysOperationLogForm.userName!='' and sysOperationLogForm.userName!=null">
+                and USER_NAME like concat('%',#{sysOperationLogForm.userName},'%')
+            </if>
+            <if test="sysOperationLogForm.operationType!='' and sysOperationLogForm.operationType!=null">
+                and OPERATION_TYPE = #{sysOperationLogForm.operationType}
+            </if>
+            <if test="sysOperationLogForm.startDate!='' and sysOperationLogForm.startDate!=null">
+                and OPERATION_TIME &gt;=#{sysOperationLogForm.startDate}
+            </if>
+            <if test="sysOperationLogForm.endDate!='' and sysOperationLogForm.endDate!=null">
+                and OPERATION_TIME &lt;=#{sysOperationLogForm.endDate}
+            </if>
+        </where>
+        ORDER BY OPERATION_TIME DESC
+    </select>
+    <select id="queryType" resultType="cn.wolfcode.web.modules.sys.entity.SysUserOperationLog">
+        select DISTINCT OPERATION_TYPE
+        from SYS_USER_OPERATION_LOG
+    </select>
+</mapper>
